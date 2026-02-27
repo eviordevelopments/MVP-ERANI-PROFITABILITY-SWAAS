@@ -1,11 +1,10 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 [build]
+  base = "erani-profitability-firewall"
   command = "npm run build"
   publish = ".next"
 
 [context.production]
   environment = { NODE_VERSION = "20" }
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
