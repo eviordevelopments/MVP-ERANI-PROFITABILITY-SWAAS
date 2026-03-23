@@ -62,8 +62,8 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                     </div>
                     <div className="relative z-10">
                         <h4 className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-8">Hemorragia Mensual Estimada</h4>
-                        <div className="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-4 animate-pulse">
-                            ${monthlyLeak.toLocaleString()} <span className="text-2xl text-gray-500 uppercase">MXN</span>
+                        <div className="text-4xl sm:text-5xl md:text-8xl font-bold text-white tracking-tighter mb-4 animate-pulse truncate w-full">
+                            ${(data.leak || 16800).toLocaleString('en-US', { minimumFractionDigits: 2 })} <span className="text-2xl text-gray-500 uppercase">MXN</span>
                         </div>
                         <p className="text-gray-400 max-w-lg leading-relaxed text-sm">
                             Tu agencia presenta una pérdida latente por procesos no auditados y horas de consultoría sin registro. Este capital se está diluyendo directamente de tu margen de utilidad neto.

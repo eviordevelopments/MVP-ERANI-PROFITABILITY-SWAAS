@@ -120,7 +120,7 @@ export default function Hero() {
                             className="button-premium group px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white flex items-center justify-center gap-4"
                         >
                             ● Solicitar Peritaje de 90 días
-                            <ArrowRight className="w-5 h-5 md:w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-5 h-5 md:w-6 h-6 group-hover:translate-x-1 group-active:translate-x-2 transition-transform" />
                         </button>
 
                         <button className="px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-3">

@@ -192,12 +192,12 @@ export default function BentoCaseStudy() {
                             { icon: Zap, label: "Rendimiento Neto", color: "text-erani-blue", bg: "bg-erani-blue/10", border: "border-erani-blue/30" }
                         ].map((item, i) => (
                             <div key={i} className="flex flex-col items-center gap-6 group cursor-default">
-                                <div className={`w-20 h-20 rounded-[2rem] ${item.bg} ${item.border} border flex items-center justify-center ${item.color} group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(0,85,160,0.2)] transition-all duration-500`}>
-                                    <item.icon className="w-10 h-10 transition-transform group-hover:rotate-12" />
+                                <div className={`w-20 h-20 rounded-[2rem] ${item.bg} ${item.border} border flex items-center justify-center ${item.color} group-hover:scale-110 group-active:scale-110 group-hover:shadow-[0_0_30px_rgba(0,85,160,0.2)] group-active:shadow-[0_0_30px_rgba(0,85,160,0.2)] transition-all duration-500`}>
+                                    <item.icon className="w-10 h-10 transition-transform group-hover:rotate-12 group-active:rotate-12" />
                                 </div>
                                 <div className="text-center">
-                                    <span className="text-xs font-medium text-gray-300 uppercase tracking-[.3em] group-hover:text-white transition-colors">{item.label}</span>
-                                    <div className="w-12 h-1 bg-erani-blue/0 group-hover:bg-erani-blue/50 mx-auto mt-2 transition-all" />
+                                    <span className="text-xs font-medium text-gray-300 uppercase tracking-[.3em] group-hover:text-white group-active:text-white transition-colors">{item.label}</span>
+                                    <div className="w-12 h-1 bg-erani-blue/0 group-hover:bg-erani-blue/50 group-active:bg-erani-blue/50 mx-auto mt-2 transition-all" />
                                 </div>
                             </div>
                         ))}
