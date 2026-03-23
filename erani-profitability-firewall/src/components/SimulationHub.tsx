@@ -29,11 +29,17 @@ const steps = [
 
 export default function SimulationHub() {
     return (
-        <section id="solucion" className="py-24 px-6 relative">
-            <div className="container max-w-5xl mx-auto">
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-5xl font-black mb-6">Auditoría Forense, no integración invasiva.</h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+        <section id="solucion" className="py-24 px-6 relative overflow-hidden">
+            {/* Background Decorations */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-erani-blue/5 blur-[150px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-erani-purple/5 blur-[150px] rounded-full pointer-events-none" />
+
+            <div className="container max-w-5xl mx-auto relative z-10">
+                <div className="text-center mb-16 md:mb-20 space-y-4">
+                    <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight font-montserrat px-4">
+                        Auditoría Forense, <br className="md:hidden" /> no integración invasiva.
+                    </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg px-6">
                         Procesamos la verdad operativa mediante inferencia, manteniendo el control total de tus datos en tus manos.
                     </p>
                 </div>

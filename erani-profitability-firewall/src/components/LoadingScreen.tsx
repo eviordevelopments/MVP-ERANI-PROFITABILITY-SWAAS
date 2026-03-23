@@ -26,7 +26,7 @@ export default function LoadingScreen() {
                             initial={{ scale: 0.8, opacity: 0 }}
                             animate={{ scale: 1.2, opacity: 0.3 }}
                             transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-                            className="absolute inset-0 bg-emerald-500 blur-[80px] rounded-full"
+                            className="absolute inset-0 bg-erani-blue blur-[80px] rounded-full"
                         />
 
                         {/* Circular Charging Bar */}
@@ -51,7 +51,7 @@ export default function LoadingScreen() {
                                 initial={{ strokeDashoffset: 553 }}
                                 animate={{ strokeDashoffset: 0 }}
                                 transition={{ duration: 2, ease: "easeInOut" }}
-                                className="text-emerald-500"
+                                className="text-erani-blue"
                             />
                         </svg>
 
@@ -63,7 +63,7 @@ export default function LoadingScreen() {
                             className="absolute inset-0 flex items-center justify-center"
                         >
                             <div className="w-24 h-24 flex items-center justify-center hover:scale-110 transition-transform duration-300">
-                                <img src="/logoerani.png" alt="ERANI Logo" className="w-full h-full object-contain" />
+                                <img src="/isologo.png" alt="ERANI Isologo" className="w-full h-full object-contain drop-shadow-[0_0_12px_rgba(0,85,160,0.6)]" />
                             </div>
                         </motion.div>
                     </div>
@@ -74,11 +74,11 @@ export default function LoadingScreen() {
                         transition={{ delay: 1, duration: 0.5 }}
                         className="absolute bottom-20 flex flex-col items-center gap-2"
                     >
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-emerald-400">Initializing Erani Systems</span>
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-erani-blue">Initializing Erani Systems</span>
                         <div className="flex gap-1">
-                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1 }} className="w-1 h-1 bg-emerald-500 rounded-full" />
-                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }} className="w-1 h-1 bg-emerald-500 rounded-full" />
-                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.4 }} className="w-1 h-1 bg-emerald-500 rounded-full" />
+                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1 }} className="w-1 h-1 bg-erani-blue rounded-full" />
+                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }} className="w-1 h-1 bg-erani-blue rounded-full" />
+                            <motion.div animate={{ opacity: [0, 1, 0] }} transition={{ repeat: Infinity, duration: 1, delay: 0.4 }} className="w-1 h-1 bg-erani-blue rounded-full" />
                         </div>
                     </motion.div>
                 </motion.div>

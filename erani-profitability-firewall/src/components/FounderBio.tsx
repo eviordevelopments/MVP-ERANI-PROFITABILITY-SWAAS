@@ -4,26 +4,22 @@ import { motion } from "framer-motion";
 import { GraduationCap, Award, Linkedin, Quote, Zap } from "lucide-react";
 import Image from "next/image";
 
-const logos = [
-    "Alibaba Group",
-    "TrepCamp NYC",
-    "Berkeley SkyDeck",
-    "Madrid Innovation",
-    "JICA",
-    "Google",
-    "Alibaba Group",
-    "TrepCamp NYC",
-    "Berkeley SkyDeck",
-    "Madrid Innovation",
-    "JICA",
-    "Google",
+const partnerLogos = [
+    { name: "Google", src: "/Google_2015_logo.svg-removebg-preview.png" },
+    { name: "Kurigage", src: "/KURIGAGE-removebg-preview.png" },
+    { name: "Logo Positivo", src: "/Logo_positivo.png-removebg-preview.png" },
+    { name: "MIT-Official", src: "/MIT-Logo-removebg-preview.png", isLarge: true },
+    { name: "A37b", src: "/a37b9da72cac390c0e38833c78aff89f-removebg-preview.png", isLarge: true },
+    { name: "BJX", src: "/Escudo-horizontal-bjx-02.png-removebg-preview.png", isLarge: true },
 ];
+
+const duplicatedLogos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
 
 export default function FounderBio() {
     return (
         <section className="py-24 md:py-32 px-6 relative border-t border-white/5 overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-emerald-500/5 blur-[120px] rounded-full" />
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#9e80ff]/30 blur-[120px] rounded-full" />
 
             <div className="container max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -44,7 +40,7 @@ export default function FounderBio() {
                                 className="object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
                             />
                             {/* Floating Decorative Elements */}
-                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-500/10 blur-3xl" />
+                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#9e80ff]/30 blur-3xl" />
                             <div className="absolute top-6 left-6 md:top-10 md:left-10 p-3 md:p-4 glassmorphism border-white/10 flex items-center gap-3 z-10">
                                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                                 <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-emerald-400">Founder & CEO</span>
@@ -74,7 +70,7 @@ export default function FounderBio() {
                             transition={{ duration: 0.8 }}
                             className="px-2"
                         >
-                            <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight text-white">Diseñado bajo estándares globales de eficiencia operativa.</h2>
+                            <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight text-white max-w-xl">Diseñado bajo estándares globales de eficiencia operativa.</h2>
 
                             <div className="prose prose-invert mb-10">
                                 <p className="text-gray-400 text-sm md:text-lg leading-relaxed mb-6">
@@ -113,19 +109,31 @@ export default function FounderBio() {
                 </div>
 
                 {/* Moving Carousel Section */}
-                <div className="mt-40 md:mt-48 relative py-12">
-                    {/* Floating Lines */}
-                    <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-emerald-500/10 to-transparent" />
+                <div className="mt-24 md:mt-32 relative py-4 px-0">
+                    {/* Screen-to-Screen Intense Glowing Lines */}
+                    <div className="absolute top-0 left-[-50vw] right-[-50vw] h-[1px] bg-[#9e80ff]/50 shadow-[0_0_30px_#9e80ff] opacity-80 z-10 pointer-events-none" />
+                    <div className="absolute bottom-0 left-[-50vw] right-[-50vw] h-[1px] bg-[#9e80ff]/50 shadow-[0_0_30px_#9e80ff] opacity-80 z-10 pointer-events-none" />
 
                     <div className="overflow-hidden">
-                        <div className="carousel-track items-center gap-12 md:gap-20 py-4 opacity-50 hover:opacity-100 transition-opacity">
-                            {logos.map((logo, i) => (
-                                <div key={i} className="flex items-center gap-4 px-8 whitespace-nowrap group">
-                                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-erani-graphite/50 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-erani-navy transition-all">
-                                        <Zap className="w-4 h-4 md:w-5 h-5" />
-                                    </div>
-                                    <span className="font-black text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-500 group-hover:text-white transition-colors">{logo}</span>
+                        <div className="flex animate-carousel items-center py-4 opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap">
+                            {duplicatedLogos.map((logo, i) => (
+                                <div 
+                                    key={i} 
+                                    className={`flex-shrink-0 relative transition-all duration-500 group mx-4 ${
+                                        logo.name === "A37b" ? 'w-80 md:w-[800px] h-20 md:h-32' : 
+                                        logo.isLarge ? 'w-64 md:w-[480px] h-16 md:h-24' : 
+                                        'w-40 md:w-56 h-10 md:h-12'
+                                    }`}
+                                >
+                                    <Image
+                                        src={logo.src}
+                                        alt={logo.name}
+                                        fill
+                                        className="object-contain transition-all duration-500 grayscale brightness-200"
+                                        style={{ 
+                                            filter: 'invert(52%) sepia(99%) saturate(408%) hue-rotate(113deg) brightness(98%) contrast(92%)' 
+                                        }}
+                                    />
                                 </div>
                             ))}
                         </div>

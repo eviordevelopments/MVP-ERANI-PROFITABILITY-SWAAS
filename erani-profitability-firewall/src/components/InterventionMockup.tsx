@@ -1,0 +1,168 @@
+"use client";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { Shield, BarChart3, TrendingUp, Activity } from "lucide-react";
+
+const screens = [
+  {
+    id: 1,
+    label: "Reporte Forense de Fugas de Capital",
+    description: "Identificación y triangulación de hemorragias invisibles en tu margen neto.",
+    src: "/cmputadora1.png",
+    accent: "#0055A0",
+  },
+  {
+    id: 2,
+    label: "Proyección de ROI a 90 Días",
+    description: "Modelo predictivo con inferencia de Nivel 2 para recuperar capital perdido.",
+    src: "/computadora2.png",
+    accent: "#9e80ff",
+  },
+  {
+    id: 3,
+    label: "Auditoría Forense · Análisis de 90 Días",
+    description: "Mapa completo de fricción operativa, Scope Creep e Índice de Datos Oscuros.",
+    src: "/computadora3.png",
+    accent: "#0055A0",
+  },
+];
+
+const narratives = [
+  "Así se ven nuestros reportes con inferencia de Nivel 2",
+  "Visibilidad forense que ningún Excel puede darte",
+  "Tu operación, bajo lente de auditoría de alta frecuencia",
+];
+
+export default function InterventionMockup() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [narrativeIndex, setNarrativeIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % screens.length);
+      setNarrativeIndex((prev) => (prev + 1) % narratives.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = screens[activeIndex];
+
+  return (
+    <section className="py-32 relative overflow-visible font-sans bg-black/40 w-[100vw] left-1/2 -translate-x-1/2">
+      {/* Background glows */}
+      <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-erani-blue/5 blur-[180px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-erani-purple/5 blur-[160px] rounded-full pointer-events-none" />
+
+      <div className="w-full relative z-10">
+
+        {/* Section Header */}
+        <div className="text-center mb-20 space-y-6 max-w-7xl mx-auto px-6">
+          {/* Animated narrative */}
+          <div className="h-7 flex items-center justify-center overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={narrativeIndex}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="text-[11px] font-bold uppercase tracking-[0.35em] text-erani-blue"
+              >
+                {narratives[narrativeIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
+          {/* Main heading with gradient */}
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+            <span
+              className="inline-block"
+              style={{
+                background: "linear-gradient(135deg, #ffffff 0%, #0055A0 50%, #9e80ff 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Así se verá nuestra intervención
+            </span>
+            <br />
+            <span className="text-white">de 90 días</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            Con auditorías continuas y reportes de nivel forense, transformaremos la opacidad operativa de tu agencia en{" "}
+            <span className="text-white font-semibold">visibilidad accionable</span> y capital recuperado.
+          </p>
+
+          {/* Pills indicator */}
+          <div className="flex items-center justify-center gap-2 pt-4">
+            {screens.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`transition-all duration-500 rounded-full ${
+                  i === activeIndex
+                    ? "w-8 h-2 bg-erani-blue"
+                    : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Mockup Frame overlaying `computadora.png` */}
+        <motion.div 
+          initial={{ opacity: 0, y: -60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative w-[100vw] left-1/2 -translate-x-1/2 mt-16 md:mt-32 px-4 md:px-8 xl:px-0 flex justify-center"
+        >
+          <div className="relative w-full max-w-[1800px] 2xl:max-w-[2200px] flex justify-center drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] overflow-hidden rounded-2xl">
+            
+            {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
+            <img 
+              src={screens[0].src} 
+              alt="ERANI Dashboard Laptop Frame Placeholder"
+              className="w-full h-auto object-contain opacity-0 pointer-events-none"
+            />
+
+            {/* Carrusel completo de computadoras deslizándose */}
+            <AnimatePresence mode="popLayout">
+              <motion.img
+                key={current.id}
+                src={current.src}
+                alt={current.label}
+                initial={{ opacity: 0, x: 200 }} 
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -200 }} 
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                className="w-full h-full object-contain absolute inset-0 z-20 pointer-events-none"
+              />
+            </AnimatePresence>
+
+          </div>
+        </motion.div>
+
+        {/* Feature tags below */}
+        <div className="mt-20 md:mt-32 flex flex-wrap justify-center gap-3 max-w-7xl mx-auto px-6">
+          {[
+            { icon: Shield, text: "Auditorías Continuas" },
+            { icon: BarChart3, text: "KPIs en Tiempo Real" },
+            { icon: TrendingUp, text: "Proyección de Recuperación" },
+            { icon: Activity, text: "Inferencia Nivel 2" },
+          ].map(({ icon: Icon, text }) => (
+            <div
+              key={text}
+              className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] text-gray-400 text-[11px] font-medium tracking-wide hover:border-erani-blue/40 hover:text-erani-blue transition-all duration-300 cursor-default"
+            >
+              <Icon className="w-3.5 h-3.5" strokeWidth={1.5} />
+              {text}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -84,7 +84,7 @@ export default function CheckoutForm() {
             </div>
 
             {/* Background Decorative Element */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/5 blur-[120px] rounded-full -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#9e80ff]/30 blur-[120px] rounded-full -z-10" />
         </section>
     );
 }
