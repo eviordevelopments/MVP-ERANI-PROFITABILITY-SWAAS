@@ -171,7 +171,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed inset-0 z-[40] bg-[#0A0E14] flex flex-col overflow-y-auto`}
+            className={`fixed inset-0 z-[40] bg-[#0A0E14] flex flex-col overflow-y-auto overflow-x-hidden w-[100vw]`}
           >
             {/* Ambient Purple Glows for Diagnostic - 10% opacity */}
             <div className="fixed top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#9E80ff]/[0.1] blur-[140px] rounded-full pointer-events-none z-0" />

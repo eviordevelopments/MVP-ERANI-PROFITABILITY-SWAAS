@@ -24,8 +24,8 @@ export default function Navigation() {
         transition={{ duration: 0.8, ease: "circOut" }}
         className="glassmorphism max-w-7xl w-full px-4 h-16 flex items-center justify-between gap-4 relative"
       >
-        <div className="flex items-center -ml-2 sm:-ml-4 md:-ml-8 shrink-0">
-          <div className="w-36 sm:w-48 md:w-72 h-32 flex items-center justify-center transform scale-100 md:scale-115">
+        <div className="flex items-center ml-0 md:-ml-8 shrink-0">
+          <div className="w-24 sm:w-32 md:w-72 h-32 flex items-center justify-center transform scale-100 md:scale-115">
             <img src="/ERANI.png" alt="ERANI Logo" className="w-full h-full object-contain" />
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function Navigation() {
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
             onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
-            className="bg-emerald-500 text-erani-navy px-4 sm:px-6 py-2 rounded-full font-bold text-xs sm:text-sm hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
+            className="bg-emerald-500 text-erani-navy px-3 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-sm hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
           >
             Agendar Peritaje
           </button>
