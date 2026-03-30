@@ -91,15 +91,20 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-left"
                 >
-                    <motion.h1
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#00F5A0]/30 bg-[#00F5A0]/10 text-[#00F5A0] text-[10px] md:text-xs font-normal mb-6 md:mb-8"
+                        className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#00F5A0]/30 bg-[#00F5A0]/5 text-[#00F5A0] mb-8"
                     >
-                        <img src="/ERANI.png" alt="ERANI Logo Oficial" className="w-4 h-4 object-contain" />
-                        ERANI: Diagnóstico Forense de Rentabilidad
-                    </motion.h1>
+                        <div className="flex items-center gap-2 border-r border-[#00F5A0]/20 pr-3">
+                            <img src="/ERANI.png" alt="ERANI" className="w-3.5 h-3.5 object-contain brightness-200" />
+                            <span className="text-[9px] font-black text-white tracking-tighter">ERANI</span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] font-[family-name:var(--font-montserrat)]">
+                            INFERENCIA FORENSE DE NIVEL 2
+                        </span>
+                    </motion.div>
 
                     <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 md:mb-8 leading-[0.95] text-white !font-bold !leading-[0.95] !tracking-tight">
                         Detén la <br />
