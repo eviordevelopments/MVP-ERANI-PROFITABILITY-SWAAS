@@ -291,7 +291,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                         rel="noopener noreferrer"
                         className="button-premium w-full text-white py-6 rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] shadow-[0_0_30px_rgba(0,245,160,0.3)]"
                     >
-                        <Zap className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
+                        <Zap className="w-5 h-5 md:w-6 md:h-6 shrink-0 translate-x-2" />
                         <span className="text-xs sm:text-base md:text-lg">Comenzar Peritaje Forense Ahora</span>
                     </a>
                     

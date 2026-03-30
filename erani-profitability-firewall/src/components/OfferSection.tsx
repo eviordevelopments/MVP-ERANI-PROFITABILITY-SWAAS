@@ -128,7 +128,7 @@ export default function OfferSection() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ 
                 opacity: 1, 
-                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -70 : -280, 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -100 : -280, 
                 y: typeof window !== 'undefined' && window.innerWidth < 768 ? 20 : 140 
               }}
               animate="floatReverse"
@@ -147,7 +147,7 @@ export default function OfferSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ 
                 opacity: 1, 
-                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 220, 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 100 : 220, 
                 y: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 120 
               }}
               animate="float"
