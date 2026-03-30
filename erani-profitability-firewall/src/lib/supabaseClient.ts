@@ -1,10 +1,11 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co'
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder'
 
-if (!supabaseUrl || !supabaseAnonKey) {
-    throw new Error("ERROR: Faltan las variables de entorno de Supabase. Revisa tu .env.local")
+// Validar en tiempo de ejecución (hidratación) o loggear advertencia en dev
+if ((!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) && process.env.NODE_ENV === 'development') {
+    console.warn("⚠️ ADVERTENCIA: Faltan las variables de entorno de Supabase. Revisa tu .env.local")
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey)
