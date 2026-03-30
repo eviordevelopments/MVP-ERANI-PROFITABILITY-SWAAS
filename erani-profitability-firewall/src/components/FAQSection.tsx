@@ -46,7 +46,7 @@ export default function FAQSection() {
                         const isOpen = openIndex === i;
                         const Icon = faq.icon;
                         return (
-                            <motion.div 
+                            <motion.article 
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export default function FAQSection() {
                                         <div className={`p-2 rounded-lg ${isOpen ? 'bg-erani-blue text-white' : 'bg-white/5 text-gray-400'}`}>
                                             <Icon className="w-5 h-5" />
                                         </div>
-                                        <span className="text-lg font-bold text-white">{faq.question}</span>
+                                        <h3 className="text-lg font-bold text-white mb-0">{faq.question}</h3>
                                     </div>
                                     <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180 text-erani-blue' : ''}`} />
                                 </button>
@@ -81,7 +81,7 @@ export default function FAQSection() {
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
-                            </motion.div>
+                            </motion.article>
                         );
                     })}
                 </div>

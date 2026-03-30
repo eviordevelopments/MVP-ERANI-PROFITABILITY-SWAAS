@@ -43,6 +43,12 @@ export default function PricingSection() {
 
                         <div className="grid md:grid-cols-2 gap-6 text-left w-full max-w-2xl mx-auto">
                             {[
+                                "Motor de Inferencia Nivel 2",
+                                "500 créditos en ERANI Platform",
+                                "Control de Scope Creep",
+                                "Sesiones mensuales con equipo",
+                                "Acceso a plataforma personalizada",
+                                "Acceso a features beta",
                                 "Auditoría de 3 proyectos históricos",
                                 "Reporte de Dark Data Index",
                                 "Cálculo de ROI de Blindaje",
@@ -61,9 +67,9 @@ export default function PricingSection() {
                                     <img src="/ERANI.png" alt="ERANI" className="w-full h-full object-contain" />
                                 </div>
                                 <div className="text-center md:text-left">
-                                    <h4 className="text-xl font-black mb-2 flex items-center justify-center md:justify-start gap-2">
+                                    <h3 className="text-xl font-black mb-2 flex items-center justify-center md:justify-start gap-2">
                                         Garantía Blindada
-                                    </h4>
+                                    </h3>
                                     <p className="text-gray-400 text-sm leading-relaxed italic">
                                         "Si tras auditar tus últimos 3 proyectos no encontramos fugas de capital superiores al costo de este peritaje, el diagnóstico es <span className="text-erani-blue font-bold not-italic">completamente gratuito</span>."
                                     </p>

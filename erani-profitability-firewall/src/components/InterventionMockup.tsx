@@ -26,6 +26,27 @@ const screens = [
     src: "/computadora3.png",
     accent: "#0055A0",
   },
+  {
+    id: 4,
+    label: "Panel de Control de Rentabilidad",
+    description: "Visualización en tiempo real de márgenes netos por proyecto y cliente.",
+    src: "/computadora5.png",
+    accent: "#00F5A0",
+  },
+  {
+    id: 5,
+    label: "Inferencia Operativa Avanzada",
+    description: "Detección de patrones anómalos en la carga de trabajo y presupuesto.",
+    src: "/computadora6.png",
+    accent: "#9e80ff",
+  },
+  {
+    id: 6,
+    label: "Matriz de Recuperación de Capital",
+    description: "Estrategias personalizadas para el blindaje de utilidad operativa.",
+    src: "/computadora7.png",
+    accent: "#0055A0",
+  },
 ];
 
 const narratives = [
@@ -49,7 +70,7 @@ export default function InterventionMockup() {
   const current = screens[activeIndex];
 
   return (
-    <section className="py-32 relative overflow-visible font-sans bg-black/40 w-[100vw] left-1/2 -translate-x-1/2">
+    <section className="py-24 md:py-32 relative overflow-hidden font-sans bg-black/40">
       {/* Background glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-erani-blue/5 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-erani-purple/5 blur-[160px] rounded-full pointer-events-none" />
@@ -117,9 +138,9 @@ export default function InterventionMockup() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-[100vw] left-1/2 -translate-x-1/2 mt-16 md:mt-32 px-4 md:px-8 xl:px-0 flex justify-center"
+          className="relative w-full mt-16 md:mt-32 px-4 md:px-8 xl:px-0 flex justify-center overflow-hidden"
         >
-          <div className="relative w-full max-w-[1800px] 2xl:max-w-[2200px] flex justify-center drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] overflow-hidden rounded-2xl">
+          <div className="relative w-full max-w-6xl mx-auto flex justify-center drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)] overflow-hidden rounded-2xl">
             
             {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
             <img 

@@ -7,9 +7,9 @@ const footerLinks = [
     {
         title: "Solución",
         links: [
-            { name: "Auditoría Forense", href: "#solucion" },
+            { name: "Auditoría Forense", href: "#intervencion" },
             { name: "Simulador de Fugas", href: "#problema" },
-            { name: "Casos de Impacto", href: "#impacto" },
+            { name: "Casos de Impacto", href: "#casos" },
             { name: "Pricing", href: "#oferta" },
         ],
     },
@@ -44,11 +44,11 @@ export default function Footer() {
 
                     {/* Brand Info */}
                     <div className="lg:col-span-2 space-y-8">
-                        <div className="flex items-center">
+                        <a href="#hero" className="flex items-center hover:opacity-80 transition-opacity">
                             <div className="w-80 h-28 -ml-24 flex items-center justify-start">
                                 <img src="/ERANI.png" alt="ERANI Logo" className="w-full h-full object-contain" />
                             </div>
-                        </div>
+                        </a>
 
                         <p className="text-gray-400 max-w-sm leading-relaxed">
                             Infraestructura de auditoría forense para agencias de alto rendimiento.
@@ -93,15 +93,15 @@ export default function Footer() {
                 <div className="grid md:grid-cols-3 gap-8 py-10 border-y border-white/5 mb-10">
                     <div className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors cursor-pointer group">
                         <Mail className="w-5 h-5 text-erani-blue" />
-                        <span className="text-sm font-medium">contacto@erani.com</span>
+                        <span className="text-sm font-medium">contacto@erani.mx</span>
                     </div>
                     <div className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors cursor-pointer">
                         <Phone className="w-5 h-5 text-erani-blue" />
-                        <span className="text-sm font-medium">+52 477 123 4567</span>
+                        <span className="text-sm font-medium">+52 462 400 4066</span>
                     </div>
                     <div className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors cursor-pointer">
                         <MapPin className="w-5 h-5 text-erani-blue" />
-                        <span className="text-sm font-medium">León, GTO | Berkeley, CA</span>
+                        <span className="text-sm font-medium">Irapuato, Guanajuato, México</span>
                     </div>
                 </div>
 

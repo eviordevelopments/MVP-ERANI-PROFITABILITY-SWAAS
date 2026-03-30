@@ -91,21 +91,21 @@ export default function Hero() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="text-left"
                 >
-                    <motion.div
+                    <motion.h1
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#00F5A0]/30 bg-[#00F5A0]/10 text-[#00F5A0] text-[10px] md:text-xs font-medium uppercase tracking-widest mb-6 md:mb-8"
+                        className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-[#00F5A0]/30 bg-[#00F5A0]/10 text-[#00F5A0] text-[10px] md:text-xs font-normal mb-6 md:mb-8"
                     >
-                        <img src="/ERANI.png" alt="ERANI" className="w-4 h-4 object-contain" />
-                        Inferencia Forense de Nivel 2
-                    </motion.div>
+                        <img src="/ERANI.png" alt="ERANI Logo Oficial" className="w-4 h-4 object-contain" />
+                        ERANI: Diagnóstico Forense de Rentabilidad
+                    </motion.h1>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 md:mb-8 leading-[0.95] text-white">
+                    <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 md:mb-8 leading-[0.95] text-white !font-bold !leading-[0.95] !tracking-tight">
                         Detén la <br />
                         <span className="brand-light-flow pb-3 inline-block">hemorragia</span> <br />
                         de utilidad.
-                    </h1>
+                    </h2>
 
                     <div className="text-lg md:text-xl text-gray-400 max-w-xl mb-10 md:mb-12 leading-relaxed min-h-[4rem]">
                         <Typewriter
@@ -123,7 +123,10 @@ export default function Hero() {
                             <ArrowRight className="w-5 h-5 md:w-6 h-6 group-hover:translate-x-1 group-active:translate-x-2 transition-transform" />
                         </button>
 
-                        <button className="px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-3">
+                        <button 
+                            onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
+                            className="px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-3"
+                        >
                             Ver Demo
                         </button>
                     </div>

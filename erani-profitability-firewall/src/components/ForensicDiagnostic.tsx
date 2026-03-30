@@ -64,12 +64,13 @@ export default function ForensicDiagnostic({ onComplete }: { onComplete: (data: 
     const [currentStep, setCurrentStep] = useState(0);
     const [answers, setAnswers] = useState<any>({});
     const [contactInfo, setContactInfo] = useState({ name: "", email: "", whatsapp: "" });
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
     const handleNext = () => {
         if (currentStep < steps.length - 1) {
             setCurrentStep(currentStep + 1);
         } else {
-            onComplete({ ...answers, contact: contactInfo });
+            onComplete({ ...answers, contact: contactInfo, privacyAccepted });
         }
     };
 
@@ -88,7 +89,8 @@ export default function ForensicDiagnostic({ onComplete }: { onComplete: (data: 
 
     const isStepValid = () => {
         if (currentStep === steps.length - 1) {
-            return contactInfo.name && contactInfo.email && contactInfo.whatsapp;
+            const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactInfo.email);
+            return contactInfo.name.trim().length > 1 && isEmailValid && contactInfo.whatsapp.length >= 7 && privacyAccepted;
         }
         if (steps[currentStep].type === "choice") return answers[steps[currentStep].id] !== undefined;
         return answers[steps[currentStep].id] !== "" && answers[steps[currentStep].id] !== undefined;
@@ -97,7 +99,7 @@ export default function ForensicDiagnostic({ onComplete }: { onComplete: (data: 
     return (
         <div className="min-h-[500px] flex flex-col justify-center max-w-5xl mx-auto py-4 px-6">
             {/* Progress Bar */}
-            <div className="mb-16 md:mb-24 px-4">
+            <div className="mb-8 md:mb-10 px-4">
                 <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                     <motion.div 
                         className="h-full bg-erani-blue shadow-[0_0_15px_rgba(0,85,160,0.5)]" 
@@ -117,9 +119,19 @@ export default function ForensicDiagnostic({ onComplete }: { onComplete: (data: 
                     className="space-y-8"
                 >
                     <div className="space-y-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-extrabold text-white leading-tight tracking-tight px-4">
-                            {steps[currentStep].question}
-                        </h2>
+                        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-erani-navy to-transparent pointer-events-none" />
+                        
+                        <div className="relative z-10 px-8 pt-0 pb-6 md:pb-8">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Simulador de Impacto & Elegibilidad</h3>
+                            <p className="text-gray-400 text-sm mb-8 leading-relaxed">
+                                Esta es una simulación estocástica que proyectará cómo se vería la rentabilidad de tu empresa, 
+                                evaluando concurrentemente si calificas para nuestro Peritaje Forense de 90 Días con garantía ERANI.
+                            </p>
+                            
+                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                                {steps[currentStep].question}
+                            </h2>
+                        </div>
                     </div>
 
                     {steps[currentStep].type === "choice" && (
@@ -200,13 +212,27 @@ export default function ForensicDiagnostic({ onComplete }: { onComplete: (data: 
                                     <label className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] pl-2">WhatsApp</label>
                                     <input
                                         type="tel"
-                                        placeholder="+52 ..."
+                                        placeholder="Tu número (Ej. 5512345678)"
                                         value={contactInfo.whatsapp}
-                                        onChange={(e) => setContactInfo({ ...contactInfo, whatsapp: e.target.value })}
+                                        onChange={(e) => setContactInfo({ ...contactInfo, whatsapp: e.target.value.replace(/[^0-9]/g, '') })}
                                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-xl text-white focus:border-[#00F5A0] outline-none transition-all placeholder:text-gray-700"
                                     />
                                 </div>
                             </div>
+
+                            <div className="flex items-start gap-3 mt-6">
+                                <input 
+                                    type="checkbox" 
+                                    checked={privacyAccepted}
+                                    onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                                    className="w-5 h-5 mt-0.5 accent-erani-blue bg-white/5 border-white/20 rounded cursor-pointer shrink-0"
+                                    id="privacy-policy"
+                                />
+                                <label htmlFor="privacy-policy" className="text-xs text-gray-500 font-medium leading-relaxed cursor-pointer select-none">
+                                    Acepto que esta información sea procesada como una simulación para evaluar mi elegibilidad. Entiendo y acepto el Aviso de Privacidad y Consentimiento de Tratamiento de Datos.
+                                </label>
+                            </div>
+
                             <button
                                 onClick={handleNext}
                                 disabled={!isStepValid()}

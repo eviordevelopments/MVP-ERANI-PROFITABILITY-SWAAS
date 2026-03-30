@@ -8,11 +8,11 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "El Problema", href: "#problema" },
-    { label: "Simulador", href: "#simulador" },
-    { label: "Auditoría Forense", href: "#proceso" },
-    { label: "Casos de Estudio", href: "#impacto" },
-    { label: "Precios", href: "#precios" },
+    { label: "El Problema", href: "#hero" },
+    { label: "Simulador", href: "#problema" },
+    { label: "Auditoría Forense", href: "#intervencion" },
+    { label: "Casos de Estudio", href: "#casos" },
+    { label: "Precios", href: "#oferta" },
     { label: "FAQ", href: "#faq" }
   ];
 
@@ -24,17 +24,53 @@ export default function Navigation() {
         transition={{ duration: 0.8, ease: "circOut" }}
         className="glassmorphism max-w-7xl w-full px-4 h-16 flex items-center justify-between gap-4 relative"
       >
-        <div className="flex items-center ml-0 md:-ml-8 shrink-0">
-          <div className="w-24 sm:w-32 md:w-72 h-32 flex items-center justify-center transform scale-100 md:scale-115">
+        <a 
+          href="#hero" 
+          onClick={(e) => {
+            e.preventDefault();
+            // Close diagnostic if open
+            if ((window as any).closeERANIDiagnostic) {
+               (window as any).closeERANIDiagnostic();
+            } else {
+               window.dispatchEvent(new CustomEvent('close-diagnostic'));
+            }
+            
+            // Absolute reset to top
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            // Soft fallback to ensure smooth feel if already idle
+            setTimeout(() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 10);
+          }}
+          className="flex items-center ml-0 md:-ml-8 shrink-0 hover:opacity-80 transition-opacity"
+        >
+          <div className="w-24 sm:w-32 md:w-72 h-32 flex items-center justify-center transform scale-125 sm:scale-100 md:scale-115 origin-left md:origin-center">
             <img src="/ERANI.png" alt="ERANI Logo" className="w-full h-full object-contain" />
           </div>
-        </div>
+        </a>
 
         <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
           {navLinks.map((item) => (
             <a 
               key={item.label} 
               href={item.href} 
+              onClick={(e) => {
+                e.preventDefault();
+                // Direct call for safety in case event listener is slow/removed
+                if ((window as any).closeERANIDiagnostic) {
+                   (window as any).closeERANIDiagnostic();
+                } else {
+                   window.dispatchEvent(new CustomEvent('close-diagnostic'));
+                }
+                
+                setTimeout(() => {
+                  const element = document.querySelector(item.href);
+                  if (element) {
+                     element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 50);
+                setIsMenuOpen(false);
+              }}
               className="relative text-gray-400 hover:text-erani-blue transition-colors group py-2"
             >
               {item.label}
@@ -45,7 +81,12 @@ export default function Navigation() {
 
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
-            onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('close-diagnostic'));
+              setTimeout(() => {
+                window.dispatchEvent(new CustomEvent('open-diagnostic'));
+              }, 100);
+            }}
             className="bg-emerald-500 text-erani-navy px-3 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-sm hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
           >
             Agendar Peritaje
@@ -73,7 +114,15 @@ export default function Navigation() {
                 <a 
                   key={item.label} 
                   href={item.href} 
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new CustomEvent('close-diagnostic'));
+                    setIsMenuOpen(false);
+                    const element = document.querySelector(item.href);
+                    if (element) {
+                       element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="text-sm font-bold uppercase tracking-widest text-gray-400 active:text-erani-blue transition-colors py-2 border-b border-white/5 last:border-0"
                 >
                   {item.label}

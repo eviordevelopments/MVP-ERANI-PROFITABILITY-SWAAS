@@ -58,19 +58,44 @@ export default function Home() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    const handleCloseDiagnostic = () => {
+      setDiagnosticState('idle');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    };
+
+    (window as any).closeERANIDiagnostic = handleCloseDiagnostic;
+
     window.addEventListener('open-diagnostic', handleOpenDiagnostic);
+    window.addEventListener('close-diagnostic', handleCloseDiagnostic);
     return () => {
       clearTimeout(timer);
+      delete (window as any).closeERANIDiagnostic;
       window.removeEventListener('open-diagnostic', handleOpenDiagnostic);
+      window.removeEventListener('close-diagnostic', handleCloseDiagnostic);
     };
   }, []);
 
-  const handleDiagnosticComplete = (data: any) => {
-    setDiagnosticData(data);
+  const handleDiagnosticComplete = async (data: any) => {
     setDiagnosticState('loading');
-    setTimeout(() => {
-      setDiagnosticState('dashboard');
-    }, 3000);
+    try {
+      const response = await fetch('/api/diagnostic', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      
+      setTimeout(() => {
+        setDiagnosticData({ raw: data, inference: result.success ? result.results : null });
+        setDiagnosticState('dashboard');
+      }, 2000);
+    } catch (error) {
+      console.error("Diagnostic error:", error);
+      setTimeout(() => {
+        setDiagnosticData({ raw: data, inference: null });
+        setDiagnosticState('dashboard');
+      }, 2000);
+    }
   };
 
   const handleFinish = () => {
@@ -81,8 +106,70 @@ export default function Home() {
     }, 4000);
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://erani.mx/#organization",
+        "name": "ERANI",
+        "url": "https://erani.mx",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://erani.mx/isologo.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Infraestructura de auditoría forense y análisis de rentabilidad para agencias."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://erani.mx/#website",
+        "url": "https://erani.mx",
+        "name": "ERANI",
+        "publisher": {
+          "@id": "https://erani.mx/#organization"
+        },
+        "inLanguage": "es-MX"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es un Diagnóstico Forense de Rentabilidad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es una auditoría profunda que triangula tus datos operativos (horas estimadas vs trabajadas) con tus datos financieros (facturado vs costo real) para encontrar dónde estás perdiendo dinero sin darte cuenta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es una Venganza de Software (SwaS)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Software with a Service (SwaS) significa que no solo te entregamos una plataforma potente. Te integramos a nuestro equipo de ingenieros para asegurar la instalación, cruce de datos y lectura de resultados mes a mes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué canales operativos triangulan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Toda la capa de gestión de trabajo (Jira, ClickUp, Asana, Monday, etc) y la capa de comunicación (Discord, Slack). El motor cruza esto contra las líneas de ingreso reportadas en bancos/Stripe."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="bg-erani-navy text-white selection:bg-erani-blue selection:text-white relative min-h-screen w-full overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <AnimatePresence>
         {!showContent && <LoadingScreen key="loading" />}
       </AnimatePresence>
@@ -105,7 +192,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className={`relative z-10 ${diagnosticState !== 'idle' ? 'hidden' : 'block'}`}
           >
-            <div className="relative">
+            <div className="relative" id="hero">
                 <Hero />
                 <ProprietaryMethodology />
 
@@ -125,10 +212,6 @@ export default function Home() {
                 <SimulationHub />
               </ScrollSection>
 
-              <ScrollSection id="intervencion">
-                <InterventionMockup />
-              </ScrollSection>
-
               <ScrollSection id="auditoria">
                 <ForensicFunnel />
               </ScrollSection>
@@ -141,7 +224,9 @@ export default function Home() {
                 <AuditProtocol />
               </ScrollSection>
 
-
+              <ScrollSection id="intervencion">
+                <InterventionMockup />
+              </ScrollSection>
 
               <ScrollSection id="oferta">
                 <PricingSection />
@@ -181,10 +266,14 @@ export default function Home() {
             <div className="relative z-10 flex flex-col min-h-full w-full">
             {diagnosticState !== 'loading' && diagnosticState !== 'thanks' && (
               <button 
-                onClick={() => setDiagnosticState('idle')}
-                className="fixed top-8 right-8 p-3 rounded-full bg-white/5 hover:bg-white/10 transition-all text-gray-400 hover:text-white z-[60]"
+                onClick={() => {
+                  setDiagnosticState('idle');
+                  window.scrollTo({ top: 0, behavior: 'instant' });
+                }}
+                className="fixed top-8 right-8 p-3 rounded-full bg-white/5 hover:bg-white/10 transition-all text-gray-400 hover:text-white z-[60] group backdrop-blur-md"
+                aria-label="Cerrar diagnóstico y volver al inicio"
               >
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
               </button>
             )}
 
@@ -261,8 +350,8 @@ export default function Home() {
                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                     className="absolute inset-0 border-4 border-erani-blue/20 border-t-erani-blue rounded-full"
                   />
-                  <div className="absolute inset-4 rounded-xl bg-erani-blue/10 flex items-center justify-center">
-                    <img src="/isologo.png" alt="ERANI" className="w-8 h-8 object-contain animate-pulse drop-shadow-[0_0_8px_rgba(0,85,160,0.8)]" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img src="/isologo.png" alt="ERANI" className="w-[75%] h-[75%] object-contain animate-pulse drop-shadow-[0_0_8px_rgba(0,85,160,0.8)]" />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Procesando Inferencia Nivel 2...</h3>
@@ -291,8 +380,7 @@ export default function Home() {
                   
                   {/* Additional Diagnostic Reporting Sections */}
                   <div className="mt-24 space-y-24">
-                    <ForensicFunnel />
-                    <InterventionMockup />
+                    <ForensicFunnel showForensicDetails={true} />
                     <BentoCaseStudy />
                     <FAQSection />
                   </div>

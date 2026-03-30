@@ -114,7 +114,7 @@ export default function BentoCaseStudy() {
                                 <span className="w-2 h-2 rounded-full bg-erani-blue animate-pulse" />
                                 Liquidez Recuperada
                             </div>
-                            <h3 className="text-5xl md:text-7xl lg:text-9xl font-bold mb-6 text-white tracking-tighter leading-none">
+                            <h3 className="text-4xl md:text-7xl lg:text-9xl font-bold mb-6 text-white tracking-tighter leading-none">
                                 ${isMounted ? <Counter value={16800} duration={3.5} /> : "0"}
                             </h3>
                             <p className="text-gray-400 text-xl font-medium max-w-sm">Detección pasiva automatizada de horas no facturadas.</p>
