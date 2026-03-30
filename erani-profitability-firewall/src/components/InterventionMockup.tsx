@@ -137,7 +137,7 @@ export default function InterventionMockup() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative w-full mt-12 md:mt-20 px-6 flex justify-center overflow-hidden"
         >
-          <div className="relative w-full max-w-7xl mx-auto flex justify-center overflow-hidden rounded-2xl md:rounded-none">
+          <div className="relative w-full md:max-w-[1500px] mx-auto flex justify-center overflow-hidden rounded-2xl md:rounded-none md:scale-105">
             
             {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
             <img 
