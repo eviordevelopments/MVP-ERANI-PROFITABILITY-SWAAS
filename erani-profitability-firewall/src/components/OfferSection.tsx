@@ -96,16 +96,16 @@ export default function OfferSection() {
 
             <button 
               onClick={() => window.location.href = "https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200"}
-              className="group relative px-8 py-4 bg-emerald-500 text-[#0A192F] font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.3)]"
+              className="group relative px-6 py-4 bg-emerald-500 text-[#0A192F] font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.3)] text-base md:text-xl"
             >
               <span className="relative z-10 flex items-center gap-3">
                 Solicitar Peritaje Ahora
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
           </motion.div>
-
+          
           {/* Animation Column */}
           <div className="relative h-[300px] md:h-[500px] flex items-center justify-center mt-12 lg:mt-0 overflow-hidden lg:overflow-visible w-full">
             {/* Center: Computer */}
@@ -159,9 +159,6 @@ export default function OfferSection() {
             >
               <img src="/ipad.png" alt="Forensic Report Tablet" className="w-full h-auto" />
             </motion.div>
-
-            {/* Aesthetic Glow behind devices */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 bg-emerald-500/20 blur-[100px] rounded-full -z-10 lg:translate-x-10" />
           </div>
 
         </div>

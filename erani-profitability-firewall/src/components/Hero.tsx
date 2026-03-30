@@ -97,7 +97,7 @@ export default function Hero() {
                         transition={{ delay: 0.2 }}
                         className="inline-flex items-center px-6 py-2 rounded-full border border-[#00F5A0]/30 bg-[#00F5A0]/5 text-[#00F5A0] mb-8"
                     >
-                        <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] font-[family-name:var(--font-montserrat)]">
+                        <span className="text-[7px] md:text-sm font-bold uppercase tracking-[0.3em] font-[family-name:var(--font-montserrat)]">
                             INFERENCIA FORENSE DE NIVEL 2
                         </span>
                     </motion.div>
@@ -164,9 +164,9 @@ export default function Hero() {
                         </div>
 
                         <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
-                            <div className="p-5 md:p-6 bg-white/[0.005] rounded-lg border border-white/20 backdrop-blur-md">
-                                <p className="text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-3">Fugas Detectadas</p>
-                                <div className="text-3xl md:text-4xl font-extrabold text-white leading-none">$<Counter value={16800} /></div>
+                            <div className="p-3 md:p-6 bg-white/[0.005] rounded-lg border border-white/20 backdrop-blur-md">
+                                <p className="text-[7px] md:text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1">Fugas Detectadas</p>
+                                <div className="text-xl md:text-4xl font-extrabold text-white leading-none">$<Counter value={16800} /></div>
                                 <div className="text-[10px] text-[#00F5A0] mt-3 flex items-center gap-1 font-bold">
                                     <TrendingUp className="w-3 h-3" />
                                     +12.5%
@@ -264,8 +264,8 @@ export default function Hero() {
                     {/* Device Renders (RESTORED) */}
                     <div className="absolute -bottom-20 -right-20 opacity-30 select-none pointer-events-none hidden xl:block">
                         <div className="relative">
-                            <Laptop className="w-48 h-48 text-gray-700" />
-                            <Smartphone className="absolute bottom-0 -left-6 w-24 h-24 text-gray-600" />
+                            <Laptop className="w-48 h-48 text-gray-400" />
+                            <Smartphone className="absolute bottom-0 -left-6 w-24 h-24 text-gray-500" />
                         </div>
                     </div>
                 </motion.div>

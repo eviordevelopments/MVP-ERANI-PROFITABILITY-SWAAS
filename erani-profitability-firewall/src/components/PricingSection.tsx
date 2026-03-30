@@ -35,10 +35,10 @@ export default function PricingSection() {
 
                         <button 
                             onClick={() => window.location.href = "https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200"}
-                            className="w-full max-w-md bg-erani-blue text-white py-6 rounded-2xl font-medium text-xl glow-blue hover:scale-[1.02] transition-transform flex items-center justify-center gap-4 mb-8"
+                            className="w-full max-w-md bg-erani-blue text-white py-6 rounded-2xl font-bold text-lg md:text-xl glow-blue hover:scale-[1.02] transition-transform flex items-center justify-center gap-4 mb-8 px-4"
                         >
                             Solicitar Peritaje Ahora
-                            <ArrowRight className="w-6 h-6" />
+                            <ArrowRight className="w-5 h-5 shrink-0" />
                         </button>
 
                         <div className="grid md:grid-cols-2 gap-6 text-left w-full max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ export default function PricingSection() {
                         <div className="mt-16 pt-12 border-t border-white/10 w-full">
                             <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-white/5 p-8 rounded-3xl border border-white/10">
                                 <div className="w-16 h-16 rounded-2xl bg-erani-blue/10 flex items-center justify-center border border-erani-blue/20 p-3">
-                                    <img src="/ERANI.png" alt="ERANI" className="w-full h-full object-contain" />
+                                    <img src="/isologo.png" alt="ERANI Isologo" className="w-full h-full object-contain" />
                                 </div>
                                 <div className="text-center md:text-left">
                                     <h3 className="text-xl font-black mb-2 flex items-center justify-center md:justify-start gap-2">
