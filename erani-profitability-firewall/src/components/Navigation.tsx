@@ -44,7 +44,7 @@ export default function Navigation() {
           }}
           className="flex items-center -ml-6 md:-ml-8 shrink-0 hover:opacity-80 transition-opacity"
         >
-          <div className="w-32 sm:w-40 md:w-80 h-32 flex items-center justify-center transform scale-150 sm:scale-125 md:scale-140 origin-left md:origin-center pointer-events-none">
+          <div className="w-32 sm:w-40 md:w-64 h-32 flex items-center justify-center transform scale-150 sm:scale-125 md:scale-110 origin-left md:origin-center pointer-events-none">
             <img src="/ERANI.png" alt="ERANI Logo" className="w-full h-full object-contain" />
           </div>
         </a>
