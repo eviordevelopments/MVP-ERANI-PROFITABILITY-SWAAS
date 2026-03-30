@@ -291,8 +291,8 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                         rel="noopener noreferrer"
                         className="button-premium w-full text-white py-6 rounded-2xl font-bold text-base md:text-lg flex items-center justify-center gap-3 transition-transform hover:scale-[1.02] shadow-[0_0_30px_rgba(0,245,160,0.3)]"
                     >
-                        <Zap className="w-6 h-6 shrink-0" />
-                        Comenzar Peritaje Forense Ahora
+                        <Zap className="w-5 h-5 md:w-6 md:h-6 shrink-0" />
+                        <span className="text-xs sm:text-base md:text-lg">Comenzar Peritaje Forense Ahora</span>
                     </a>
                     
                     <div className="flex flex-col xl:flex-row gap-4 mt-2">
@@ -302,8 +302,8 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                             rel="noopener noreferrer"
                             className="flex-1 border border-white/10 bg-white/5 text-white py-4 rounded-xl font-bold text-sm hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2 text-center"
                         >
-                            <Calendar className="w-4 h-4 shrink-0" />
-                            Sesión Exploratoria 15 min
+                            <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
+                            <span className="text-[10px] sm:text-sm">Sesión Exploratoria 15 min</span>
                         </a>
                         <a 
                             href="https://wa.me/524624004066?text=Hola,%20quisiera%20hablar%20con%20el%20equipo%20de%20ERANI%20sobre%20el%20Peritaje%20Forense."
@@ -311,7 +311,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                             rel="noopener noreferrer"
                             className="flex-1 border border-white/10 bg-white/5 text-gray-300 py-4 rounded-xl font-bold text-sm hover:text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center text-center"
                         >
-                            Hablar con ERANI
+                            <span className="text-[10px] sm:text-sm">Hablar con ERANI</span>
                         </a>
                     </div>
                 </div>

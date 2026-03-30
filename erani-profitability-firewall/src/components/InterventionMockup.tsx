@@ -87,7 +87,7 @@ export default function InterventionMockup() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="text-[11px] font-bold uppercase tracking-[0.35em] text-erani-blue"
+                className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] md:tracking-[0.35em] text-erani-blue px-4 text-center"
               >
                 {narratives[narrativeIndex]}
               </motion.p>
@@ -153,10 +153,10 @@ export default function InterventionMockup() {
                 src={current.src}
                 alt={current.label}
                 initial={{ opacity: 0, x: 200 }} 
-                animate={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0, scale: typeof window !== 'undefined' && window.innerWidth < 768 ? 1.4 : 1 }}
                 exit={{ opacity: 0, x: -200 }} 
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="w-full h-full object-contain absolute inset-0 z-20 pointer-events-none rounded-xl md:rounded-none"
+                className="w-full h-full object-contain absolute inset-0 z-20 pointer-events-none rounded-2xl md:rounded-none"
               />
             </AnimatePresence>
 
