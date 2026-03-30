@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+const getSupabaseAdmin = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+  const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder_key';
+  return createClient(supabaseUrl, supabaseServiceKey);
+};
 import { runEraniInference, ForensicInputs } from '@/lib/eraniInferenceEngine';
 
 export async function POST(request: Request) {
@@ -33,7 +35,7 @@ export async function POST(request: Request) {
     const results = runEraniInference(inputs);
 
     // 3. Insertar en Supabase
-    const { data: dbData, error } = await supabaseAdmin
+    const { data: dbData, error } = await getSupabaseAdmin()
       .from('erani_diagnostics')
       .insert([
         {

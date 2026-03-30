@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
+const getSupabaseAdmin = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+  const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder_key';
+  return createClient(supabaseUrl, supabaseServiceKey);
+};
 
 const STRIPE_PAYMENT_LINK = 'https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200';
 
@@ -31,7 +33,7 @@ export async function POST(request: Request) {
     }
 
     // Insertar en Supabase
-    const { data, error } = await supabaseAdmin
+    const { data, error } = await getSupabaseAdmin()
       .from('erani_checkout_leads')
       .insert([
         {
