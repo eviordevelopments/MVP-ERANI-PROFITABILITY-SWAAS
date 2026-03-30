@@ -100,7 +100,7 @@ export default function FounderBio() {
                                 </div>
                             </div>
 
-                            <a href="https://linkedin.com" target="_blank" className="button-premium px-8 py-4 rounded-2xl inline-flex items-center gap-4 text-erani-navy font-black text-sm uppercase tracking-widest group">
+                            <a href="https://www.linkedin.com/in/diego-arredondo1803/" target="_blank" className="button-premium px-8 py-4 rounded-2xl inline-flex items-center gap-4 text-erani-navy font-black text-sm uppercase tracking-widest group">
                                 Conectar en LinkedIn
                                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
                             </a>

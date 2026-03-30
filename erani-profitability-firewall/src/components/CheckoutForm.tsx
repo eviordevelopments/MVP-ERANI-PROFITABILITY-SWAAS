@@ -194,8 +194,8 @@ export default function CheckoutForm() {
                                         </>
                                     ) : (
                                         <>
-                                            <CreditCard className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                                            Garantizar Acceso ($2,950 MXN)
+                                            <CreditCard className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform" />
+                                            <span className="text-base md:text-xl">Garantizar Acceso ($2,950 MXN)</span>
                                         </>
                                     )}
                                 </button>

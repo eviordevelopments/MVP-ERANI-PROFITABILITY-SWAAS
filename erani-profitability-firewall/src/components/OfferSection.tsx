@@ -107,17 +107,17 @@ export default function OfferSection() {
           </motion.div>
           
           {/* Animation Column */}
-          <div className="relative h-[300px] md:h-[500px] flex items-center justify-center mt-12 lg:mt-0 overflow-hidden lg:overflow-visible w-full">
+          <div className="relative h-[400px] md:h-[500px] flex items-center justify-center -mt-4 mb-4 lg:mt-0 overflow-hidden lg:overflow-visible w-full">
             {/* Center: Computer */}
             <motion.div 
               id="device-center"
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 1.15 }}
+              whileInView={{ opacity: 1, scale: typeof window !== 'undefined' && window.innerWidth < 768 ? 1.05 : 1.15 }}
               animate="float"
               variants={deviceVariants}
               viewport={{ once: true }}
               className="absolute z-20 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] lg:translate-x-10"
-              style={{ width: 'min(75vw, 650px)' }}
+              style={{ width: 'min(85vw, 650px)' }}
             >
               <img src="/computadora4.png" alt="Forensic Report Desktop" className="w-full h-auto" />
             </motion.div>
@@ -128,15 +128,15 @@ export default function OfferSection() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ 
                 opacity: 1, 
-                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -50 : -280, 
-                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 40 : 140 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -40 : -280, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 20 : 140 
               }}
               animate="floatReverse"
               variants={deviceVariants}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="absolute z-40 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] lg:translate-x-10"
-              style={{ width: 'min(20vw, 220px)' }}
+              style={{ width: 'min(25vw, 220px)' }}
             >
               <img src="/celular.png" alt="Forensic Report Mobile" className="w-full h-auto" />
             </motion.div>
@@ -147,15 +147,15 @@ export default function OfferSection() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ 
                 opacity: 1, 
-                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 60 : 220, 
-                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 120 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 220, 
+                y: typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 120 
               }}
               animate="float"
               variants={deviceVariants}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               className="absolute z-50 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] lg:translate-x-10"
-              style={{ width: 'min(40vw, 400px)' }}
+              style={{ width: 'min(45vw, 400px)' }}
             >
               <img src="/ipad.png" alt="Forensic Report Tablet" className="w-full h-auto" />
             </motion.div>

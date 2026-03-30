@@ -156,7 +156,7 @@ export default function InterventionMockup() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -200 }} 
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="w-full h-full object-contain absolute inset-0 z-20 pointer-events-none"
+                className="w-full h-full object-contain absolute inset-0 z-20 pointer-events-none rounded-xl md:rounded-none"
               />
             </AnimatePresence>
 
