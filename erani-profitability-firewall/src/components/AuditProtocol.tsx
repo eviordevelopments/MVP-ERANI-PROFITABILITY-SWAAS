@@ -35,7 +35,7 @@ export default function AuditProtocol() {
   ];
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden font-sans">
+    <section className="py-16 md:py-24 px-6 relative overflow-hidden font-sans">
       {/* Background Ornaments */}
       <div className="absolute top-0 right-[-5%] w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-[-5%] w-[500px] h-[500px] bg-erani-blue/5 blur-[120px] rounded-full pointer-events-none" />

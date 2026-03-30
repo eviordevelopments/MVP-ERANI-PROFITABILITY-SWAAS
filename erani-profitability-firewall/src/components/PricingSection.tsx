@@ -5,7 +5,7 @@ import { ShieldCheck, ArrowRight, Zap, CheckCircle2 } from "lucide-react";
 
 export default function PricingSection() {
     return (
-        <section id="oferta" className="py-24 px-6 relative overflow-hidden">
+        <section id="oferta" className="py-16 md:py-24 px-6 relative overflow-hidden">
             {/* Subtle Strategic Gradients */}
             <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-erani-blue/5 blur-[150px] rounded-full pointer-events-none" />
             <div className="absolute bottom-1/4 -left-20 w-[500px] h-[500px] bg-erani-purple/5 blur-[130px] rounded-full pointer-events-none" />

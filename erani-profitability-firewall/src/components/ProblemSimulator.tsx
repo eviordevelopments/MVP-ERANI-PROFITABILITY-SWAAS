@@ -12,7 +12,7 @@ export default function ProblemSimulator() {
     };
 
     return (
-        <section id="problema" className="py-24 px-6 bg-erani-black relative overflow-hidden">
+        <section id="problema" className="py-16 md:py-32 px-6 bg-erani-black relative overflow-hidden">
             {/* Subtle Strategic Gradients */}
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-erani-blue/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-400px h-400px bg-[#9e80ff]/30 blur-[100px] rounded-full pointer-events-none" />

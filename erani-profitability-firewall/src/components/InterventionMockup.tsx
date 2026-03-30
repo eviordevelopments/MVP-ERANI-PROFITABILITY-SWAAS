@@ -70,7 +70,7 @@ export default function InterventionMockup() {
   const current = screens[activeIndex];
 
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden font-sans bg-black">
+    <section className="py-12 md:py-32 relative overflow-hidden font-sans bg-black">
       {/* Background glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-erani-blue/5 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-erani-purple/5 blur-[160px] rounded-full pointer-events-none" />

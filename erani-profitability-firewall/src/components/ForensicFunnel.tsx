@@ -50,7 +50,7 @@ export default function ForensicFunnel({ showForensicDetails = false }: { showFo
     if (!showForensicDetails) return null;
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden font-sans">
+        <section className="py-16 md:py-24 px-6 relative overflow-hidden font-sans">
             {/* Background Decorations */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-erani-blue/5 blur-[150px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-erani-purple/5 blur-[150px] rounded-full pointer-events-none" />

@@ -17,7 +17,7 @@ const duplicatedLogos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
 
 export default function FounderBio() {
     return (
-        <section className="py-24 md:py-32 px-6 relative border-t border-white/5 overflow-hidden">
+        <section className="py-16 md:py-32 px-6 relative border-t border-white/5 overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#9e80ff]/30 blur-[120px] rounded-full" />
 
