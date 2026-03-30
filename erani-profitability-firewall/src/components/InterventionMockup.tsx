@@ -78,8 +78,8 @@ export default function InterventionMockup() {
       <div className="w-full relative z-10">
 
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-6 max-w-7xl mx-auto px-6">
-          <div className="h-7 flex items-center justify-center overflow-hidden">
+        <div className="text-center mb-10 md:mb-16 space-y-6 max-w-7xl mx-auto px-6">
+          <div className="h-auto min-h-[1.75rem] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.p
                 key={narrativeIndex}
@@ -87,7 +87,7 @@ export default function InterventionMockup() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.1em] md:tracking-[0.35em] text-erani-blue px-4 text-center"
+                className="text-[10px] md:text-[11px] font-bold uppercase tracking-normal md:tracking-[0.35em] text-erani-blue px-4 text-center"
               >
                 {narratives[narrativeIndex]}
               </motion.p>
