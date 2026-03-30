@@ -70,7 +70,7 @@ export default function InterventionMockup() {
   const current = screens[activeIndex];
 
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden font-sans bg-black/40">
+    <section className="py-20 md:py-32 relative overflow-hidden font-sans bg-black">
       {/* Background glows */}
       <div className="absolute top-[-10%] left-[-10%] w-[700px] h-[700px] bg-erani-blue/5 blur-[180px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-erani-purple/5 blur-[160px] rounded-full pointer-events-none" />
@@ -78,8 +78,7 @@ export default function InterventionMockup() {
       <div className="w-full relative z-10">
 
         {/* Section Header */}
-        <div className="text-center mb-20 space-y-6 max-w-7xl mx-auto px-6">
-          {/* Animated narrative */}
+        <div className="text-center mb-16 space-y-6 max-w-7xl mx-auto px-6">
           <div className="h-7 flex items-center justify-center overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.p
@@ -95,7 +94,6 @@ export default function InterventionMockup() {
             </AnimatePresence>
           </div>
 
-          {/* Main heading with gradient */}
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
             <span
               className="inline-block"
@@ -116,31 +114,30 @@ export default function InterventionMockup() {
             <span className="text-white font-semibold">visibilidad accionable</span> y capital recuperado.
           </p>
 
-          {/* Pills indicator */}
-          <div className="flex items-center justify-center gap-2 pt-4">
+          <div className="flex items-center justify-center gap-3 pt-6">
             {screens.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setActiveIndex(i)}
                 className={`transition-all duration-500 rounded-full ${
                   i === activeIndex
-                    ? "w-8 h-2 bg-erani-blue"
-                    : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                    ? "w-8 h-1 bg-erani-blue"
+                    : "w-2 h-1 bg-white/20 hover:bg-white/40"
                 }`}
               />
             ))}
           </div>
         </div>
 
-        {/* Mockup Frame overlaying `computadora.png` */}
+        {/* Full-width carousel container */}
         <motion.div 
-          initial={{ opacity: 0, y: -60 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full mt-16 md:mt-24 px-4 md:px-6 flex justify-center overflow-hidden"
+          className="relative w-full mt-12 md:mt-20 flex justify-center overflow-hidden"
         >
-          <div className="relative w-full max-w-[1800px] mx-auto flex justify-center drop-shadow-[0_40px_80px_rgba(0,0,0,0.8)]">
+          <div className="relative w-full flex justify-center">
             
             {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
             <img 
