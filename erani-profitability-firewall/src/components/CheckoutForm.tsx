@@ -185,17 +185,17 @@ export default function CheckoutForm() {
                                 <button 
                                     type="submit" 
                                     disabled={isSubmitting}
-                                    className="button-premium w-full py-5 rounded-2xl font-black text-lg md:text-xl text-erani-navy flex items-center justify-center gap-4 group disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="button-premium w-full py-5 px-6 rounded-2xl font-black text-erani-navy flex items-center justify-center gap-3 md:gap-4 group disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <Loader2 className="w-6 h-6 animate-spin" />
-                                            Procesando Acceso...
+                                            <Loader2 className="w-5 h-5 md:w-6 md:h-6 animate-spin" />
+                                            <span className="text-sm md:text-xl">Procesando Acceso...</span>
                                         </>
                                     ) : (
                                         <>
-                                            <CreditCard className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform" />
-                                            <span className="text-base md:text-xl">Garantizar Acceso ($2,950 MXN)</span>
+                                            <CreditCard className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform shrink-0" />
+                                            <span className="text-[13px] sm:text-base md:text-lg lg:text-xl">Garantizar Acceso ($2,950 MXN)</span>
                                         </>
                                     )}
                                 </button>

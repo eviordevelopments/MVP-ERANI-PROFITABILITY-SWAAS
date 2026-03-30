@@ -128,7 +128,7 @@ export default function OfferSection() {
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ 
                 opacity: 1, 
-                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -40 : -280, 
+                x: typeof window !== 'undefined' && window.innerWidth < 768 ? -70 : -280, 
                 y: typeof window !== 'undefined' && window.innerWidth < 768 ? 20 : 140 
               }}
               animate="floatReverse"
@@ -136,7 +136,7 @@ export default function OfferSection() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="absolute z-40 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] lg:translate-x-10"
-              style={{ width: 'min(25vw, 220px)' }}
+              style={{ width: 'min(30vw, 220px)' }}
             >
               <img src="/celular.png" alt="Forensic Report Mobile" className="w-full h-auto" />
             </motion.div>

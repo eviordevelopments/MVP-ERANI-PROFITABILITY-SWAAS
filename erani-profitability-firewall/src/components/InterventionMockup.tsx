@@ -129,15 +129,15 @@ export default function InterventionMockup() {
           </div>
         </div>
 
-        {/* Full-width carousel container */}
+        {/* Center-aligned carousel container */}
         <motion.div 
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full mt-12 md:mt-20 flex justify-center overflow-hidden"
+          className="relative w-full mt-12 md:mt-20 px-6 flex justify-center overflow-hidden"
         >
-          <div className="relative w-full flex justify-center">
+          <div className="relative w-full max-w-7xl mx-auto flex justify-center overflow-hidden rounded-2xl md:rounded-none">
             
             {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
             <img 
