@@ -30,12 +30,12 @@ const positionVariants = {
 
 export default function OfferSection() {
   return (
-    <section id="peritaje" className="py-32 px-6 relative overflow-hidden bg-[#0A192F]">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/10 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-erani-blue/10 blur-[100px] rounded-full" />
-      </div>
+    <section id="peritaje" className="py-32 px-6 relative overflow-hidden">
+      {/* 🔵 Strategic Background Gradients (Matched with Hero) */}
+      <div className="absolute top-[10%] right-[15%] w-[400px] h-[400px] bg-erani-blue/10 blur-[130px] rounded-full pointer-events-none select-none animate-pulse" />
+      <div className="absolute inset-0 dark-data-grid-bg opacity-20 select-none" />
+      <div className="absolute top-1/4 left-1/4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-brand-blur opacity-30 select-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-brand-blur opacity-20 select-none" />
 
       <div className="container max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
