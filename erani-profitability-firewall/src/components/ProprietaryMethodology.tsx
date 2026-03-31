@@ -50,7 +50,7 @@ export default function ProprietaryMethodology() {
                     <span className="w-2 h-2 rounded-full bg-erani-blue animate-pulse" />
                     La Metodología Propietaria
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tighter leading-tight">
+                <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight font-montserrat">
                     Tecnología de Grado Industrial <br/>
                     <span className="text-gradient-green">
                         para tu Rentabilidad.

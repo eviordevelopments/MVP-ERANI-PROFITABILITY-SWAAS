@@ -51,7 +51,7 @@ export default function AuditProtocol() {
             <Lock className="w-3.5 h-3.5 text-emerald-500" />
             Privacidad por Diseño
           </motion.div>
-          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight font-montserrat">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat tracking-tight">
             Protocolo de Auditoría: <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-500">
               Seguridad y Transparencia.

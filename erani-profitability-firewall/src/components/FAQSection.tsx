@@ -35,7 +35,7 @@ export default function FAQSection() {
 
             <div className="container max-w-4xl mx-auto relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">Preguntas Frecuentes</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight font-montserrat leading-tight">Preguntas Frecuentes</h2>
                     <p className="text-gray-400 max-w-xl mx-auto">
                         Todo lo que necesitas saber sobre el blindaje de utilidad y la auditoría forense automatizada.
                     </p>

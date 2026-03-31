@@ -53,7 +53,7 @@ export default function OfferSection() {
               Validado por Clientes: Información Veraz
             </div>
 
-            <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight font-montserrat">
               Peritaje Forense <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-emerald-400 to-emerald-600">
                 de 90 Días

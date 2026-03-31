@@ -89,7 +89,7 @@ export default function BentoCaseStudy() {
                             </div>
                             <span className="text-[12px] font-medium uppercase tracking-[0.4em] text-erani-blue">Forensic Audit Result</span>
                         </motion.div>
-                        <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-[0.9] text-white tracking-tighter">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-white tracking-tight font-montserrat">
                             Evidencia de <br /><span className="text-gradient-green">Impacto Irrefutable</span>
                         </h2>
                         <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed max-w-xl">

@@ -34,7 +34,7 @@ export default function SwaSSection() {
             EL PRÓXIMO NIVEL DE EFICIENCIA
           </motion.div>
           
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-tight font-montserrat">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight font-montserrat tracking-tight">
             Software <span className="text-emerald-500 italic">with a</span> Service
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">

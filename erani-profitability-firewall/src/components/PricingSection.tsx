@@ -23,7 +23,7 @@ export default function PricingSection() {
                             Oferta de Lanzamiento
                         </div>
 
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Diagnóstico Forense de Rentabilidad</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight font-montserrat leading-tight">Diagnóstico Forense de Rentabilidad</h2>
                         <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed mb-10">
                             Identificamos tus fugas financieras y calculamos tu ROI de recuperación en menos de 7 días.
                         </p>

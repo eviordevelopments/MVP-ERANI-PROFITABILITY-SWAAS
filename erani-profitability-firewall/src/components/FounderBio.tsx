@@ -70,7 +70,7 @@ export default function FounderBio() {
                             transition={{ duration: 0.8 }}
                             className="px-2"
                         >
-                            <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight text-white max-w-xl">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight text-white max-w-xl font-montserrat tracking-tight">
                                 Diseñado bajo estándares globales de <span className="text-gradient-green">eficiencia operativa.</span>
                             </h2>
 

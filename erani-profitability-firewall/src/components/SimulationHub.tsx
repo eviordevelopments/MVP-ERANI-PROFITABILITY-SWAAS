@@ -36,7 +36,7 @@ export default function SimulationHub() {
 
             <div className="container max-w-5xl mx-auto relative z-10">
                 <div className="text-center mb-16 md:mb-20 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight font-montserrat px-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight font-montserrat px-4 leading-tight">
                         Auditoría Forense, <br className="md:hidden" /> no integración invasiva.
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg px-6">

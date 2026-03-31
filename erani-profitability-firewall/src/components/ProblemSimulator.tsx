@@ -19,7 +19,7 @@ export default function ProblemSimulator() {
 
             <div className="container max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-12 md:mb-20">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight tracking-tight font-montserrat">
                         La ceguera financiera le <span className="border-b-4 border-erani-coral">cuesta</span> a una agencia promedio <br className="hidden md:block" />
                         <span className="text-[#00F5A0] font-bold tracking-tight">$720,000 MXN anuales.</span>
                     </h2>

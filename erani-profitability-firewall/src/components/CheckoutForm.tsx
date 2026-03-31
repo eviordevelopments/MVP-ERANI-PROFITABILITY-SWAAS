@@ -65,7 +65,7 @@ export default function CheckoutForm() {
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4">
                         Protocolo de Peritaje Activo
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center justify-center gap-3">Agendar Peritaje Forense</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3 tracking-tight font-montserrat leading-tight">Agendar Peritaje Forense</h2>
                     <p className="text-gray-400 text-sm md:text-base px-4">Inicia la recuperación de capital analizando tu estructura de datos actual.</p>
                 </div>
 

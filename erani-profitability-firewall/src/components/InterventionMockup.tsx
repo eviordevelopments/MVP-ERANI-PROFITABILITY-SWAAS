@@ -94,7 +94,7 @@ export default function InterventionMockup() {
             </AnimatePresence>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight font-montserrat">
             <span className="text-gradient-green">
               Así se verá nuestra intervención
             </span>
