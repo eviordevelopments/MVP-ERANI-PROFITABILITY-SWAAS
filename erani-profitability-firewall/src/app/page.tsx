@@ -375,16 +375,23 @@ export default function Home() {
 
             {diagnosticState === 'dashboard' && (
               <div className="flex-1 w-full pt-12">
+                {/* Constrained main dashboard content */}
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                   <DiagnosticDashboard data={diagnosticData} onReset={handleFinish} />
-                  
-                  {/* Additional Diagnostic Reporting Sections */}
-                  <div className="mt-24 space-y-24">
-                    <ForensicFunnel showForensicDetails={true} />
-                    <BentoCaseStudy />
-                    <FAQSection />
-                  </div>
                 </div>
+
+                {/* Full-bleed Intervention Section — outside max-w-7xl to reach true edge-to-edge */}
+                <div className="w-full">
+                  <InterventionMockup />
+                </div>
+
+                {/* Additional Diagnostic Reporting Sections */}
+                <div className="max-w-7xl mx-auto px-4 md:px-8 mt-24 space-y-24">
+                  <ForensicFunnel showForensicDetails={true} />
+                  <BentoCaseStudy />
+                  <FAQSection />
+                </div>
+
                 <div className="mt-20 w-full">
                   <Footer />
                 </div>

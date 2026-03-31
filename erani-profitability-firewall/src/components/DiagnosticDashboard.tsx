@@ -11,7 +11,6 @@ import {
     CheckCircle2,
 } from "lucide-react";
 import { Counter } from "./Counter";
-import InterventionMockup from "./InterventionMockup";
 
 interface DiagnosticDashboardProps {
     data: any;
@@ -329,10 +328,6 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                         </p>
                     </div>
                 </motion.div>
-            </div>
-    
-            <div className="w-full bg-black">
-                <InterventionMockup />
             </div>
         </>
     );
