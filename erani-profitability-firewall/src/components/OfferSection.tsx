@@ -48,7 +48,7 @@ export default function OfferSection() {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-[#10B981] text-xs font-bold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
               <Shield className="w-4 h-4" />
               Validado por Clientes: Información Veraz
             </div>

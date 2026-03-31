@@ -46,7 +46,7 @@ export default function ProprietaryMethodology() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true, margin: "-100px" }}
             >
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium uppercase tracking-[0.2em] text-gray-400 mb-6">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-6">
                     <span className="w-2 h-2 rounded-full bg-erani-blue animate-pulse" />
                     La Metodología Propietaria
                 </div>

@@ -62,7 +62,7 @@ export default function CheckoutForm() {
         <section id="registro" className="py-24 px-6 bg-erani-navy relative overflow-hidden">
             <div className="container max-w-2xl mx-auto relative z-10">
                 <div className="text-center mb-12">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase tracking-widest mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
                         Protocolo de Peritaje Activo
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3 tracking-tight font-montserrat leading-tight">Agendar Peritaje Forense</h2>

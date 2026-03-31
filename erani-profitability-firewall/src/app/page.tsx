@@ -285,7 +285,7 @@ export default function Home() {
                   className="glassmorphism p-8 md:p-12 rounded-[2rem] border border-white/10 w-full text-center space-y-8"
                 >
                   {/* Demo Badge */}
-                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-erani-blue/30 bg-erani-blue/10 text-erani-blue text-[10px] font-bold uppercase tracking-widest">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-erani-blue/30 bg-erani-blue/10 text-erani-blue text-xs font-bold uppercase tracking-[0.3em] mb-6">
                     <span className="w-1.5 h-1.5 rounded-full bg-erani-blue animate-pulse inline-block" />
                     Diagnóstico Demostrativo · Datos Protegidos
                   </div>

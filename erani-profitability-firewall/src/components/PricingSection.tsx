@@ -19,7 +19,7 @@ export default function PricingSection() {
                     <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-erani-blue/10 blur-[100px] rounded-full" />
 
                     <div className="relative z-10 flex flex-col items-center text-center">
-                        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-erani-blue/10 border border-erani-blue/20 text-erani-blue text-xs font-bold uppercase tracking-widest mb-8">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-erani-blue/10 border border-erani-blue/20 text-erani-blue text-xs font-bold uppercase tracking-[0.3em] mb-8">
                             Oferta de Lanzamiento
                         </div>
 

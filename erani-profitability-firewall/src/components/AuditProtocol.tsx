@@ -46,7 +46,7 @@ export default function AuditProtocol() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-2"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-6"
           >
             <Lock className="w-3.5 h-3.5 text-emerald-500" />
             Privacidad por Diseño
