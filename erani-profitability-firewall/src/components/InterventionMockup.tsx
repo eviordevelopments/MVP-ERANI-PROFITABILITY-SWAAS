@@ -127,9 +127,9 @@ export default function InterventionMockup() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative w-full mt-12 md:mt-20 px-6 flex justify-center overflow-hidden"
+          className="relative w-full mt-12 md:mt-20 px-0 flex justify-center overflow-hidden"
         >
-          <div className="relative w-full md:max-w-[1500px] mx-auto flex justify-center overflow-hidden rounded-2xl md:rounded-none md:scale-105">
+          <div className="relative w-full md:max-w-[1500px] mx-auto flex justify-center overflow-hidden md:rounded-none md:scale-105">
             
             {/* Imágen invisible principal para dictar la altura perfecta responsive del contendor sin saltos */}
             <img 

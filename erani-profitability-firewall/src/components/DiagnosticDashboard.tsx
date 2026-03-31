@@ -144,7 +144,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
 
     return (
         <>
-            <div ref={dashboardRef} className="pt-28 pb-12 px-6 max-w-6xl mx-auto font-sans relative">
+            <div ref={dashboardRef} className="pt-28 pb-0 px-6 max-w-6xl mx-auto font-sans relative">
                 <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#9E80ff]/[0.1] blur-[150px] rounded-full pointer-events-none -z-10" />
                 <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-erani-blue/[0.1] blur-[150px] rounded-full pointer-events-none -z-10" />
                 
@@ -331,7 +331,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                 </motion.div>
             </div>
     
-            <div className="mt-24">
+            <div className="w-full bg-black">
                 <InterventionMockup />
             </div>
         </>
