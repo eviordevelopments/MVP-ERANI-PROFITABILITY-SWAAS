@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ShieldCheck, Activity, TrendingUp, Cpu, Database, Smartphone, Laptop, Zap, HeartPulse, ShieldAlert, Award, PieChart, ScatterChart } from "lucide-react";
+import { ArrowRight, Calendar, ShieldCheck, Activity, TrendingUp, Cpu, Database, Zap, HeartPulse, ShieldAlert, Award, PieChart, ScatterChart } from "lucide-react";
 import { useEffect, useState, useRef, useMemo } from "react";
 
 const Counter = ({ value, duration = 2 }: { value: number, duration?: number }) => {
@@ -118,7 +118,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
                         <button 
                             onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
-                            className="button-premium group px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white flex items-center justify-center gap-4"
+                            className="button-premium group px-8 md:px-10 py-4 md:py-5 font-medium text-lg md:text-xl text-white flex items-center justify-center gap-4 hover:shadow-[0_0_20px_rgba(158,128,255,0.4)]"
                         >
                             ● Solicitar Peritaje de 90 días
                             <ArrowRight className="w-5 h-5 md:w-6 h-6 group-hover:translate-x-1 group-active:translate-x-2 transition-transform" />
@@ -126,8 +126,9 @@ export default function Hero() {
 
                         <button 
                             onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
-                            className="px-8 md:px-10 py-4 md:py-5 rounded-2xl font-medium text-lg md:text-xl text-white border border-white/10 hover:bg-white/5 transition-all flex items-center justify-center gap-3"
+                            className="button-secondary px-8 md:px-10 py-4 md:py-5 font-medium text-lg md:text-xl flex items-center justify-center gap-3"
                         >
+                            <Calendar className="w-5 h-5" />
                             Ver Demo
                         </button>
                     </div>
@@ -261,13 +262,6 @@ export default function Hero() {
                         </div>
                     </motion.div>
 
-                    {/* Device Renders (RESTORED) */}
-                    <div className="absolute -bottom-20 -right-20 opacity-30 select-none pointer-events-none hidden xl:block">
-                        <div className="relative">
-                            <Laptop className="w-48 h-48 text-gray-400" />
-                            <Smartphone className="absolute bottom-0 -left-6 w-24 h-24 text-gray-500" />
-                        </div>
-                    </div>
                 </motion.div>
             </div>
         </section>

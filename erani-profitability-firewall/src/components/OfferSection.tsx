@@ -96,13 +96,10 @@ export default function OfferSection() {
 
             <button 
               onClick={() => window.location.href = "https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200"}
-              className="group relative px-6 py-4 bg-emerald-500 text-[#0A192F] font-bold rounded-xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.3)] text-base md:text-xl"
+              className="button-premium group px-6 py-4 text-white font-bold transition-all hover:scale-105 active:scale-95 text-base md:text-xl flex items-center gap-3"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                Solicitar Peritaje Ahora
-                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              Solicitar Peritaje Ahora
+              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
           

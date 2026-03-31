@@ -87,7 +87,7 @@ export default function Navigation() {
                 window.dispatchEvent(new CustomEvent('open-diagnostic'));
               }, 100);
             }}
-            className="bg-emerald-500 text-erani-navy px-3 sm:px-6 py-2 rounded-full font-bold text-[10px] sm:text-sm hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
+            className="bg-emerald-500 text-erani-navy px-3 sm:px-6 py-2 rounded-2xl font-bold text-[10px] sm:text-sm hover:scale-105 active:scale-95 transition-transform whitespace-nowrap"
           >
             Agendar Peritaje
           </button>

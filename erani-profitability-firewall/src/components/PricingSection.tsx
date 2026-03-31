@@ -35,7 +35,7 @@ export default function PricingSection() {
 
                         <button 
                             onClick={() => window.location.href = "https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200"}
-                            className="w-full max-w-md bg-erani-blue text-white py-6 rounded-2xl font-bold text-lg md:text-xl glow-blue hover:scale-[1.02] transition-transform flex items-center justify-center gap-4 mb-8 px-4"
+                            className="button-premium w-full max-w-md text-white py-6 font-bold text-lg md:text-xl flex items-center justify-center gap-4 mb-8 px-4"
                         >
                             Solicitar Peritaje Ahora
                             <ArrowRight className="w-5 h-5 shrink-0" />

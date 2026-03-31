@@ -229,6 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, #0055A0 0%, #9e80ff 100%);
   box-shadow: 0 4px 15px rgba(0, 85, 160, 0.3);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 1rem; /* 2xl */
 }
 
 .button-premium:hover {
@@ -248,6 +249,21 @@ h1, h2, h3, h4, h5, h6 {
       rgba(255, 255, 255, 0.2),
       transparent);
   animation: line-move 3s infinite;
+}
+
+.button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: white;
+  border-radius: 1rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
 }
 
 .animate-float {

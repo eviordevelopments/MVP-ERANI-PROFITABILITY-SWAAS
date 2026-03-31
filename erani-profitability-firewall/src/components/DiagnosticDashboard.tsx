@@ -301,7 +301,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                                 href="https://calendar.app.google/EovZMgXzWoeHxeLKA" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="flex-1 border border-white/10 bg-white/5 text-white py-4 rounded-xl font-bold text-sm hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center gap-2 text-center"
+                                className="button-secondary flex-1 py-4 font-bold text-sm flex items-center justify-center gap-2 text-center"
                             >
                                 <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" />
                                 <span className="text-[10px] sm:text-sm">Sesión Exploratoria 15 min</span>
@@ -310,7 +310,7 @@ export default function DiagnosticDashboard({ data, onReset }: DiagnosticDashboa
                                 href="https://wa.me/524624004066?text=Hola,%20quisiera%20hablar%20con%20el%20equipo%20de%20ERANI%20sobre%20el%20Peritaje%20Forense."
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="flex-1 border border-white/10 bg-white/5 text-gray-300 py-4 rounded-xl font-bold text-sm hover:text-white hover:bg-white/10 hover:border-white/20 transition-all flex items-center justify-center text-center"
+                                className="button-secondary flex-1 py-4 font-bold text-sm flex items-center justify-center text-center"
                             >
                                 <span className="text-[10px] sm:text-sm">Hablar con ERANI</span>
                             </a>
