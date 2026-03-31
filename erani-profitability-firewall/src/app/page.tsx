@@ -381,7 +381,7 @@ export default function Home() {
                 </div>
 
                 {/* Full-bleed Intervention Section — outside max-w-7xl to reach true edge-to-edge */}
-                <div className="w-full">
+                <div className="w-full mt-16 md:mt-24">
                   <InterventionMockup />
                 </div>
 
