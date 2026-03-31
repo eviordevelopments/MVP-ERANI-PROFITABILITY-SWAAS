@@ -52,10 +52,13 @@ export default function ProprietaryMethodology() {
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white tracking-tighter leading-tight">
                     Tecnología de Grado Industrial <br/>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-erani-blue via-erani-purple to-erani-coral">
+                    <span className="text-gradient-green">
                         para tu Rentabilidad.
                     </span>
                 </h2>
+                <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
+                    Nuestra infraestructura SwaS opera bajo un protocolo de análisis de tres capas que garantiza la integridad de tu margen.
+                </p>
             </motion.div>
         </div>
 

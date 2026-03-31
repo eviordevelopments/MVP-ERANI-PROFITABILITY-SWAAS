@@ -70,10 +70,12 @@ export default function FounderBio() {
                             transition={{ duration: 0.8 }}
                             className="px-2"
                         >
-                            <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight text-white max-w-xl">Diseñado bajo estándares globales de eficiencia operativa.</h2>
+                            <h2 className="text-3xl md:text-5xl font-black mb-6 md:mb-8 leading-tight text-white max-w-xl">
+                                Diseñado bajo estándares globales de <span className="text-gradient-green">eficiencia operativa.</span>
+                            </h2>
 
                             <div className="prose prose-invert mb-10">
-                                <p className="text-gray-400 text-sm md:text-lg leading-relaxed mb-6">
+                                <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed mb-6">
                                     <span className="text-white font-bold">Diego Arredondo</span> es Marketing Leader & Subgerente Comercial en Kurigage y Estratega de Growth B2B.
                                     Es egresado del programa de especialización en <span className="text-emerald-400 font-bold">Transformación Digital de Alibaba Group</span> (Global Digital Talent).
                                 </p>

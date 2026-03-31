@@ -90,9 +90,9 @@ export default function BentoCaseStudy() {
                             <span className="text-[12px] font-medium uppercase tracking-[0.4em] text-erani-blue">Forensic Audit Result</span>
                         </motion.div>
                         <h2 className="text-4xl md:text-7xl font-bold mb-8 leading-[0.9] text-white tracking-tighter">
-                            Evidencia de <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-erani-blue to-erani-purple">Impacto Irrefutable</span>
+                            Evidencia de <br /><span className="text-gradient-green">Impacto Irrefutable</span>
                         </h2>
-                        <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl">
+                        <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed max-w-xl">
                             Analizamos el flujo de "Datos Oscuros" del Caso Nola. Sin intervención manual, la IA detectó la hemorragia financiera en tiempo récord.
                         </p>
                     </div>

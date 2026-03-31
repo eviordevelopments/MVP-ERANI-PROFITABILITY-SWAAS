@@ -27,6 +27,7 @@ html {
   --erani-purple-20: rgba(158, 128, 255, 0.2);
   /* Optimized 20% opacity for subtle convergence */
   --erani-coral: #FF5C5C;
+  --erani-green: #00F5A0;
 }
 
 @theme {
@@ -36,6 +37,7 @@ html {
   --color-erani-blue: var(--erani-blue);
   --color-erani-purple: var(--erani-purple);
   --color-erani-coral: var(--erani-coral);
+  --color-erani-green: var(--erani-green);
   --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
 
   @keyframes shimmer-fast {
@@ -164,6 +166,13 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, #0055A0, #9e80ff);
+}
+
+.text-gradient-green {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #00F5A0, #00D185);
 }
 
 .shimmer-text {

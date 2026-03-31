@@ -95,21 +95,13 @@ export default function InterventionMockup() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-            <span
-              className="inline-block"
-              style={{
-                background: "linear-gradient(135deg, #ffffff 0%, #0055A0 50%, #9e80ff 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span className="text-gradient-green">
               Así se verá nuestra intervención
             </span>
             <br />
             <span className="text-white">de 90 días</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
             Con auditorías continuas y reportes de nivel forense, transformaremos la opacidad operativa de tu agencia en{" "}
             <span className="text-white font-semibold">visibilidad accionable</span> y capital recuperado.
           </p>

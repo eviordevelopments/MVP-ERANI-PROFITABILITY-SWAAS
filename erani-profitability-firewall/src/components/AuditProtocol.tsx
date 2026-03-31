@@ -57,7 +57,7 @@ export default function AuditProtocol() {
               Seguridad y Transparencia.
             </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed">
             No necesitamos acceso a tus contraseñas ni conexiones en vivo. Tú mantienes el control total enviándonos solo los metadatos necesarios.
           </p>
         </div>

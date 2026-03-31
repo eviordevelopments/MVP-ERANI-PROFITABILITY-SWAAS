@@ -108,7 +108,7 @@ export default function Hero() {
                         de utilidad.
                     </h2>
 
-                    <div className="text-lg md:text-xl text-gray-400 max-w-xl mb-10 md:mb-12 leading-relaxed min-h-[4rem]">
+                    <div className="text-lg md:text-xl text-gray-400 font-medium max-w-xl mb-10 md:mb-12 leading-relaxed min-h-[4rem]">
                         <Typewriter
                             text="ERANI utiliza un Software with a Service (SwaS) diseñado para rescatar tu margen neto. Identificamos el Scope Creep y las fugas financieras en tus datos operativos, sin que tu equipo tenga que mover un solo dedo."
                             delay={1.5}

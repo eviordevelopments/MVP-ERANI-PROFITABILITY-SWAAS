@@ -23,7 +23,7 @@ export default function ProblemSimulator() {
                         La ceguera financiera le <span className="border-b-4 border-erani-coral">cuesta</span> a una agencia promedio <br className="hidden md:block" />
                         <span className="text-[#00F5A0] font-bold tracking-tight">$720,000 MXN anuales.</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base px-4">
+                    <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg font-medium leading-relaxed px-4">
                         El trabajo no registrado es capital perdido. Ajusta el nivel de "Datos Oscuros"
                         en tu operación para ver el impacto real en tu utilidad.
                     </p>
