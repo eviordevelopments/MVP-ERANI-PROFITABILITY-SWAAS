@@ -125,7 +125,7 @@ export default function Hero() {
                         </button>
 
                         <button 
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-diagnostic'))}
+                            onClick={() => window.open('https://platform.erani.mx/', '_blank')}
                             className="button-secondary px-8 md:px-10 py-4 md:py-5 font-medium text-lg md:text-xl flex items-center justify-center gap-3"
                         >
                             <Calendar className="w-5 h-5" />

@@ -33,7 +33,7 @@ export default function PricingSection() {
                             <span className="text-xl font-bold text-gray-500 uppercase">MXN</span>
                         </div>
 
-                        <button 
+                        <button
                             onClick={() => window.location.href = "https://book.stripe.com/9B67sMd4Y6FK9n94lO8N200"}
                             className="button-premium w-full max-w-md text-white py-6 font-bold text-lg md:text-xl flex items-center justify-center gap-4 mb-8 px-4"
                         >

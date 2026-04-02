@@ -31,17 +31,19 @@ export default function FounderBio() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8 }}
-                            className="relative aspect-[4/5] rounded-3xl overflow-hidden glassmorphism p-2 border-emerald-500/20"
+                            className="relative aspect-square w-full sm:w-[90%] md:w-[420px] mx-auto rounded-full overflow-hidden glassmorphism p-2 border-emerald-500/20"
                         >
                             <Image
                                 src="/diego_arredondo.jpg"
-                                alt="Diego Arredondo - Founder of Erani"
+                                alt="Diego Arredondo, Founder de ERANI, experto en Growth B2B y Transformación Digital"
+                                title="Diego Arredondo - Founder y CEO de ERANI"
+                                itemProp="image"
                                 fill
-                                className="object-cover rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
+                                className="object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
                             />
                             {/* Floating Decorative Elements */}
                             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#9e80ff]/30 blur-3xl" />
-                            <div className="absolute top-6 left-6 md:top-10 md:left-10 p-3 md:p-4 glassmorphism border-white/10 flex items-center gap-3 z-10">
+                            <div className="absolute top-10 left-6 md:top-14 md:left-10 p-3 md:p-4 glassmorphism rounded-xl border-white/10 flex items-center gap-3 z-10 shadow-lg backdrop-blur-md">
                                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                                 <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-emerald-400">Founder & CEO</span>
                             </div>
@@ -74,14 +76,22 @@ export default function FounderBio() {
                                 Diseñado bajo estándares globales de <span className="text-gradient-green">eficiencia operativa.</span>
                             </h2>
 
-                            <div className="prose prose-invert mb-10">
+                            <div className="prose prose-invert mb-10" itemScope itemType="https://schema.org/Person">
+                                <meta itemProp="name" content="Diego Arredondo" />
+                                <meta itemProp="jobTitle" content="Founder & CEO" />
+                                <meta itemProp="worksFor" content="ERANI" />
+
                                 <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed mb-6">
-                                    <span className="text-white font-bold">Diego Arredondo</span> es Marketing Leader & Subgerente Comercial en Kurigage y Estratega de Growth B2B.
-                                    Es egresado del programa de especialización en <span className="text-emerald-400 font-bold">Transformación Digital de Alibaba Group</span> (Global Digital Talent).
+                                    <span className="text-white font-bold">Diego Arredondo</span> es Founder de ERANI y estratega de Growth B2B con +4 años liderando áreas comerciales en la industria del software y desempeñando roles clave en operaciones y gestión de comunidades en <span className="text-emerald-400 font-bold">TrepCamp</span>, el ecosistema global de emprendimiento de alto impacto.
                                 </p>
-                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
-                                    Cuenta con un MBA por la Universidad Incarnate Word y certificaciones técnicas en Big Data e IA por el <span className="font-bold">MIT y Google</span>.
-                                    Como representante de <span className="font-bold text-white">TrepCamp</span> en Nueva York, Diego combina visión global con ejecución financiera local.
+                                <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                                    MBA por la UIW y egresado del programa en <span className="text-white font-bold">Transformación Digital de Alibaba Group</span> (Global Digital Talent). Cuenta con certificaciones técnicas en <span className="text-emerald-400 font-bold">Big Data e IA por el MIT y Google</span>.
+                                </p>
+                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-4">
+                                    Como becado de TrepCamp & Santander en Nueva York, Diego combina visión global con <span className="text-white font-bold">ejecución financiera local</span>.
+                                </p>
+                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed border-l-2 border-emerald-500/50 pl-4 py-1 italic">
+                                    A través de ERANI, su misión es erradicar la <span className="text-emerald-400 font-bold">"hemorragia financiera"</span> de las agencias de servicios mediante auditorías de <span className="text-white font-bold">Inferencia de Nivel 2</span> impulsadas por IA, blindando la rentabilidad neta de sus clientes.
                                 </p>
                             </div>
 

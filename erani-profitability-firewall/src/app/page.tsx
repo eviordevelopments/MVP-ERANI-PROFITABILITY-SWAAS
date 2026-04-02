@@ -264,18 +264,7 @@ export default function Home() {
             <div className="fixed top-[40%] right-[-15%] w-[400px] h-[400px] bg-[#9E80ff]/[0.05] blur-[120px] rounded-full pointer-events-none z-0" />
 
             <div className="relative z-10 flex flex-col min-h-full w-full">
-            {diagnosticState !== 'loading' && diagnosticState !== 'thanks' && (
-              <button 
-                onClick={() => {
-                  setDiagnosticState('idle');
-                  window.scrollTo({ top: 0, behavior: 'instant' });
-                }}
-                className="fixed top-8 right-8 p-3 rounded-full bg-white/5 hover:bg-white/10 transition-all text-gray-400 hover:text-white z-[60] group backdrop-blur-md"
-                aria-label="Cerrar diagnóstico y volver al inicio"
-              >
-                <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
-              </button>
-            )}
+
 
             {diagnosticState === 'briefing' && (
               <div className="flex-1 flex flex-col items-center justify-center py-24 px-6 max-w-4xl mx-auto w-full">
