@@ -22,45 +22,51 @@ export default function FounderBio() {
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#9e80ff]/30 blur-[120px] rounded-full" />
 
             <div className="container max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
                     {/* Left Side: Image & Narrative */}
                     <div className="relative group px-2 md:px-0">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                            className="relative aspect-square w-full sm:w-[90%] md:w-[420px] mx-auto rounded-full overflow-hidden glassmorphism p-2 border-emerald-500/20"
-                        >
-                            <Image
-                                src="/diego_arredondo.jpg"
-                                alt="Diego Arredondo, Founder de ERANI, experto en Growth B2B y Transformación Digital"
-                                title="Diego Arredondo - Founder y CEO de ERANI"
-                                itemProp="image"
-                                fill
-                                className="object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
-                            />
-                            {/* Floating Decorative Elements */}
-                            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#9e80ff]/30 blur-3xl" />
-                            <div className="absolute top-10 left-6 md:top-14 md:left-10 p-3 md:p-4 glassmorphism rounded-xl border-white/10 flex items-center gap-3 z-10 shadow-lg backdrop-blur-md">
-                                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                                <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-emerald-400">Founder & CEO</span>
+                        <div className="relative pt-6"> {/* Added padding to make space for the top badge */}
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="relative aspect-square w-full sm:w-[90%] md:w-[500px] lg:w-[550px] mx-auto rounded-full overflow-hidden p-2 border border-emerald-500/20 bg-white/5 backdrop-blur-sm"
+                                style={{ borderRadius: '50%' }}
+                            >
+                                <div className="absolute inset-2 overflow-hidden" style={{ borderRadius: '50%' }}>
+                                    <Image
+                                        src="/diego_arredondo.jpg"
+                                        alt="Diego Arredondo, Founder de ERANI, experto en Growth B2B y Transformación Digital"
+                                        title="Diego Arredondo - Founder y CEO de ERANI"
+                                        itemProp="image"
+                                        fill
+                                        className="object-cover object-[center_12%] scale-[1.2] grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    />
+                                </div>
+                            </motion.div>
+                            
+                            {/* Floating Badge (Now absolute to the container wrapper, top centered) */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 p-2 px-4 md:px-5 md:py-3 glassmorphism rounded-full border-white/10 flex items-center gap-3 z-30 shadow-2xl backdrop-blur-xl">
+                                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_#10b981]" />
+                                <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-emerald-400">Founder & CEO</span>
                             </div>
-                        </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.4 }}
-                            className="absolute -bottom-8 md:-bottom-10 right-6 left-6 md:right-10 md:left-10 p-6 md:p-8 glassmorphism border-emerald-500/30 z-20"
-                        >
-                            <Quote className="w-8 h-8 md:w-10 h-10 text-emerald-500/30 absolute top-4 left-4" />
-                            <p className="text-xs md:text-sm italic text-gray-300 relative z-10 text-center leading-relaxed">
-                                "Erani nace de la intersección entre la estrategia financiera de alto nivel y la inteligencia operativa automatizada."
-                            </p>
-                        </motion.div>
+                            {/* Floating Quote */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.4 }}
+                                className="absolute -bottom-8 md:-bottom-10 right-6 left-6 md:right-10 md:left-10 p-6 md:p-8 glassmorphism border-emerald-500/30 z-20"
+                            >
+                                <Quote className="w-8 h-8 md:w-10 h-10 text-emerald-500/30 absolute top-4 left-4" />
+                                <p className="text-xs md:text-sm italic text-gray-300 relative z-10 text-center leading-relaxed">
+                                    "Erani nace de la intersección entre la estrategia financiera de alto nivel y la inteligencia operativa automatizada."
+                                </p>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Right Side: Bio & Authority */}
