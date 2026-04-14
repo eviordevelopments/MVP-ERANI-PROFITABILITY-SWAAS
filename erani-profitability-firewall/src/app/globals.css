@@ -148,6 +148,18 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+/* Global Button Typography - Montserrat Normal */
+button, 
+a.button-premium,
+a.button-secondary,
+.button-premium, 
+.button-secondary,
+.button-premium *,
+.button-secondary * {
+  font-family: 'Montserrat', var(--font-montserrat), sans-serif !important;
+  font-weight: 400 !important;
+}
+
 /* Custom Utilities */
 .glassmorphism {
   backdrop-filter: blur(12px);

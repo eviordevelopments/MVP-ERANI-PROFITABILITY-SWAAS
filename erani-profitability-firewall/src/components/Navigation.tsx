@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Shield, BarChart3, Lock, Users, Menu, X } from "lucide-react";
+import { Shield, BarChart3, Lock, Users, Menu, X, LogIn, Fingerprint } from "lucide-react";
 import { useState } from "react";
 
 export default function Navigation() {
@@ -22,7 +22,7 @@ export default function Navigation() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "circOut" }}
-        className="glassmorphism max-w-7xl w-full px-4 h-16 flex items-center justify-between gap-4 relative"
+        className="glassmorphism max-w-[1440px] w-full px-6 h-16 flex items-center justify-between gap-4 relative"
       >
         <a 
           href="#hero" 
@@ -49,7 +49,7 @@ export default function Navigation() {
           </div>
         </a>
 
-        <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
+        <div className="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-widest flex-1 justify-center">
           {navLinks.map((item) => (
             <a 
               key={item.label} 
@@ -71,7 +71,7 @@ export default function Navigation() {
                 }, 50);
                 setIsMenuOpen(false);
               }}
-              className="relative text-gray-400 hover:text-erani-blue transition-colors group py-2"
+              className="relative text-gray-400 hover:text-erani-blue transition-colors group py-2 whitespace-nowrap"
             >
               {item.label}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-erani-blue transition-all duration-300 group-hover:w-full" />
@@ -79,7 +79,7 @@ export default function Navigation() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button 
             onClick={() => {
               window.dispatchEvent(new CustomEvent('close-diagnostic'));
@@ -91,6 +91,22 @@ export default function Navigation() {
           >
             Agendar Peritaje
           </button>
+
+          {/* Ingresar - Login Button */}
+          <a
+            href="https://app.erani.mx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-2xl border border-erani-blue/40 bg-erani-blue/10 hover:bg-erani-blue/20 hover:border-erani-blue/70 transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(0,85,160,0.15)] hover:shadow-[0_0_25px_rgba(0,85,160,0.35)]"
+            title="Accede a la Plataforma ERANI"
+          >
+            {/* Animated ring */}
+            <span className="absolute inset-0 rounded-2xl border border-erani-blue/0 group-hover:border-erani-blue/60 group-hover:shadow-[0_0_12px_rgba(0,85,160,0.5)] transition-all duration-500" />
+            <Fingerprint className="w-4 h-4 text-erani-blue group-hover:text-white transition-colors duration-300" />
+            <span className="text-[11px] sm:text-xs font-medium uppercase tracking-widest text-erani-blue group-hover:text-white transition-colors duration-300 hidden sm:inline">
+              Ingresar
+            </span>
+          </a>
           
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}

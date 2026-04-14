@@ -7,10 +7,19 @@ const footerLinks = [
     {
         title: "Solución",
         links: [
+            { name: "ERANI Platform", href: "https://app.erani.mx" },
             { name: "Auditoría Forense", href: "#intervencion" },
             { name: "Simulador de Fugas", href: "#problema" },
-            { name: "Casos de Impacto", href: "#casos" },
             { name: "Pricing", href: "#oferta" },
+        ],
+    },
+    {
+        title: "Ecosistema",
+        links: [
+            { name: "ERIS", href: "#" },
+            { name: "Founding Members", href: "#" },
+            { name: "SLA (Service Level)", href: "#" },
+            { name: "Casos de Impacto", href: "#casos" },
         ],
     },
     {
@@ -20,15 +29,6 @@ const footerLinks = [
             { name: "Metodología", href: "#" },
             { name: "Prensa", href: "#" },
             { name: "Carreras", href: "#" },
-        ],
-    },
-    {
-        title: "Legal",
-        links: [
-            { name: "Privacidad", href: "#" },
-            { name: "Términos", href: "#" },
-            { name: "Garantía", href: "#" },
-            { name: "Seguridad de Datos", href: "#" },
         ],
     },
 ];
